@@ -8,6 +8,7 @@ export const HeaderContainer = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 28px;
     .wrapper {
         width: 100%;
         display: flex;
@@ -39,7 +40,9 @@ export const LogoImg = styled.div`
 
 export const MenuItems = styled.div`
     max-width: 100%;
+    height: 100%;
     display: flex;
+    align-items: center;
     gap: 8px;
 
     #mobileMenu {
@@ -140,18 +143,54 @@ export const DesktopMenu = styled.div`
     @media (max-width: 950px) {
         display: none;
     }
+    .dropdown {
+        height: 100%;
+        max-width: 234px;
+        position: relative;
+    }
 `
 
 export const DepartmentsMenu = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     min-width: 234px;
     max-width: 90%;
     height: 100%;
     background-color: ${({theme}) => theme.secondary};
     border-radius: 4px;
     font-size: 1.2rem;
+    z-index: 8;
+`
+
+export const DepartmentsDropDown = styled.div`
+    position: absolute;
+    padding-top: 8px;
+    top: 45px;
+    background-color: ${({theme}) => theme.secondary};
+    width: 100%;
+    border-radius: 0 0 4px 4px;
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 16px;
+        max-width: 100%;
+    }
+    li {
+        padding: 8px;
+        border-radius: 4px;
+    }
+
+    li:hover{
+        background-color: ${({theme}) => theme.primary};
+    }
+    a {
+        color: #FFFFFF;
+        padding: 8px;
+        width: 100%;
+    }
 `
 
 export const DesktopItemsContainer = styled.div`
@@ -167,7 +206,41 @@ export const DesktopItem = styled.div`
     display: flex;
     align-items: center;
     gap: 8px;
+    position: relative;
+    .cart-items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: ${({theme}) => theme.secondary};
+        border-radius: 100%;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: -8px;
+        left: 12px;
+        p {
+            font-size: 0.8rem;
+        }
+        span {
+            font-size: 0.6rem;
+        }
+    }
     p {
         font-size: 1.2rem;
+    }
+`
+
+export const ChangeThemeBtn = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 4px;
+    &:hover {
+        background-color: ${({theme}) => theme.secondary};
+        transition: .5s;
+    }
+    @media (min-width: 600px) {
+        padding: 5px;
     }
 `

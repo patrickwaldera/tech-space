@@ -7,8 +7,10 @@ import {
     SearchBoxDesktop,
     DesktopMenu,
     DepartmentsMenu,
+    DepartmentsDropDown,
     DesktopItemsContainer,
-    DesktopItem
+    DesktopItem,
+    ChangeThemeBtn
 } from './styles'
 import logo from '../../assets/logo.svg'
 import Image from 'next/image'
@@ -16,11 +18,16 @@ import {
     MdDarkMode,
     MdOutlineSearch,
     MdShoppingCart,
-    MdAccountCircle
+    MdAccountCircle,
+    MdOutlineLightMode
 } from 'react-icons/md'
 import { IoList } from 'react-icons/io5'
+import { ColorModeContext } from "@/components/ColorMode";
+import { useContext, useState } from 'react'
 
 const Header = () => {
+  const contexto = useContext(ColorModeContext);
+  const [showDropdown, setShowDropdown] = useState(false)
   return (
     <HeaderContainer>
         <div className='wrapper'>
@@ -34,16 +41,42 @@ const Header = () => {
                             <MdOutlineSearch className='searchIcon' size={32}/>
                             <input type="text" placeholder='O que você procura? Digite aqui' />
                         </SearchBoxDesktop>
-                        <DepartmentsMenu>
-                            <p>Departamentos</p>
-                        </DepartmentsMenu>
+                        <div className='dropdown' onMouseEnter={() => setShowDropdown(true)}
+                            onMouseLeave={() => setShowDropdown(false)}>
+                            <DepartmentsMenu>
+                                <p>Departamentos</p>
+                            </DepartmentsMenu>
+                            {showDropdown && <DepartmentsDropDown>
+                                <ul>
+                                    <li><a href="">Hardware</a></li>
+                                    <li><a href="">Monitores</a></li>
+                                    <li><a href="">Gabinetes</a></li>
+                                    <li><a href="">Cadeiras Gamer</a></li>
+                                    <li><a href="">Notebooks</a></li>
+                                    <li><a href="">Periféricos</a></li>
+                                    <li><a href="">Rede e Internet</a></li>
+                                    <li><a href="">Video Games</a></li>
+                                    <li><a href="">Softwares</a></li>
+                                </ul>
+                            </DepartmentsDropDown> }
+                        </div>
                     </DesktopMenu>
                 </div>
                 <MenuItems>
-                    <MdDarkMode size={24} />
+                    <ChangeThemeBtn>
+                        {contexto.mode === 'dark' ? 
+                            <MdOutlineLightMode size={24}  onClick={contexto.toggleTheme}/>
+                           
+                        :
+                            <MdDarkMode size={24}  onClick={contexto.toggleTheme}/>
+                        }
+                    </ChangeThemeBtn>
                     <DesktopItemsContainer>
                         <DesktopItem>
                             <MdShoppingCart size={24} />
+                            <div className='cart-items'>
+                                <p>0<span>+</span></p>
+                            </div>
                             <p>Carrinho</p>
                         </DesktopItem>
                         <DesktopItem>

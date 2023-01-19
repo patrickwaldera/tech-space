@@ -39,6 +39,9 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Roboto', sans-serif;
 
     }
+    a {
+        text-decoration: none;
+    }
     ol, ul {
         list-style: none;
     }
