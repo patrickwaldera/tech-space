@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         border: 0;
-        font-size: 100%;
+        font-size: 62.5%; // Para transformar 1rem == 10px
         font: inherit;
         vertical-align: baseline;
     }
@@ -37,6 +37,7 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${({theme}) => theme.backgroundBase};
         color: ${({theme}) => theme.textColorBase};
         font-family: 'Roboto', sans-serif;
+
     }
     ol, ul {
         list-style: none;

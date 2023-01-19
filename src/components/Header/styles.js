@@ -24,6 +24,13 @@ export const Menu = styled.div`
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    .leftWrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 44px;
+    }
 `
 
 export const LogoImg = styled.div`
@@ -34,6 +41,12 @@ export const MenuItems = styled.div`
     max-width: 100%;
     display: flex;
     gap: 8px;
+
+    #mobileMenu {
+        @media (min-width: 1271px) {
+            display: none;
+        }
+    }
 `
 
 export const SearchBoxMobile = styled.div`
@@ -73,7 +86,88 @@ export const SearchBoxMobile = styled.div`
         outline: 0;
     }
 
-    @media (min-width: 900px) {
+    @media (min-width: 951px) {
         display: none;
+    }
+`
+
+export const SearchBoxDesktop = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 350px;
+    max-width: 90%;
+    height: 100%;
+    background-color: ${({theme}) => theme.searchBox};
+    margin: 0 auto;
+    border-radius: 4px;
+
+    &:focus-within {
+        outline: 2px solid ${({theme}) => theme.secondary};
+    }
+
+    .searchIcon {
+        color: ${({theme}) => theme.searchText};
+        margin-left: 6px;
+    }
+
+    input {
+        min-width: 350px;
+        max-width: 100%;
+        border: 0;
+        margin: 0 6px;
+        background-color: rgba(0, 0, 0, 0);
+        color: ${({theme}) => theme.textColorBase};
+        font-size: 1.2rem;
+    }
+
+    input::placeholder {
+        opacity: 0.6;
+        color: ${({theme}) => theme.searchText};
+    }
+
+    input:focus {
+        outline: 0;
+    }
+`
+
+export const DesktopMenu = styled.div`
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 48px;
+    @media (max-width: 950px) {
+        display: none;
+    }
+`
+
+export const DepartmentsMenu = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 234px;
+    max-width: 90%;
+    height: 100%;
+    background-color: ${({theme}) => theme.secondary};
+    border-radius: 4px;
+    font-size: 1.2rem;
+`
+
+export const DesktopItemsContainer = styled.div`
+    display: flex;
+    gap: 24px;
+    margin-left: 24px;
+    @media (max-width: 1270px) {
+        display: none;
+    }
+`
+
+export const DesktopItem = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    p {
+        font-size: 1.2rem;
     }
 `

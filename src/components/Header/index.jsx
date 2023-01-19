@@ -3,11 +3,21 @@ import {
     Menu,
     LogoImg,
     MenuItems,
-    SearchBoxMobile
+    SearchBoxMobile,
+    SearchBoxDesktop,
+    DesktopMenu,
+    DepartmentsMenu,
+    DesktopItemsContainer,
+    DesktopItem
 } from './styles'
 import logo from '../../assets/logo.svg'
 import Image from 'next/image'
-import { MdDarkMode, MdOutlineSearch } from 'react-icons/md'
+import { 
+    MdDarkMode,
+    MdOutlineSearch,
+    MdShoppingCart,
+    MdAccountCircle
+} from 'react-icons/md'
 import { IoList } from 'react-icons/io5'
 
 const Header = () => {
@@ -15,12 +25,33 @@ const Header = () => {
     <HeaderContainer>
         <div className='wrapper'>
             <Menu>
-                <LogoImg>
-                    <Image src={logo} alt='Tech Space' priority/>
-                </LogoImg>
+                <div className='leftWrapper'>
+                    <LogoImg>
+                        <Image id='logo' src={logo} alt='Tech Space' priority/>
+                    </LogoImg>
+                    <DesktopMenu>
+                        <SearchBoxDesktop>
+                            <MdOutlineSearch className='searchIcon' size={32}/>
+                            <input type="text" placeholder='O que você procura? Digite aqui' />
+                        </SearchBoxDesktop>
+                        <DepartmentsMenu>
+                            <p>Departamentos</p>
+                        </DepartmentsMenu>
+                    </DesktopMenu>
+                </div>
                 <MenuItems>
                     <MdDarkMode size={24} />
-                    <IoList size={24}/>
+                    <DesktopItemsContainer>
+                        <DesktopItem>
+                            <MdShoppingCart size={24} />
+                            <p>Carrinho</p>
+                        </DesktopItem>
+                        <DesktopItem>
+                            <MdAccountCircle size={24} />
+                            <p>Minha Conta</p>
+                        </DesktopItem>
+                    </DesktopItemsContainer>
+                    <IoList id='mobileMenu' size={24}/>
                 </MenuItems>
             </Menu>
             <SearchBoxMobile>
