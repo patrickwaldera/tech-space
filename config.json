@@ -1,0 +1,40 @@
+{
+    "departments": [
+        {  
+            "id": 0,
+            "name": "Hardware"
+        },
+        {  
+            "id": 1,
+            "name": "Monitores"
+        },
+        {  
+            "id": 2,
+            "name": "Gabinetes"
+        },
+        {  
+            "id": 3,
+            "name": "Cadeiras Gamer"
+        },
+        {  
+            "id": 4,
+            "name": "Notebooks"
+        },
+        {  
+            "id": 5,
+            "name": "Periféricos"
+        },
+        {  
+            "id": 6,
+            "name": "Rede e Internet"
+        },
+        {  
+            "id": 7,
+            "name": "Video Games"
+        },
+        {  
+            "id": 8,
+            "name": "Softwares"
+        }
+    ]
+}
