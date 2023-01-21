@@ -8,7 +8,7 @@ export const HeaderContainer = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 28px;
+    margin-bottom: 1.6rem;
     .wrapper {
         width: 100%;
         display: flex;
@@ -46,7 +46,7 @@ export const MenuItems = styled.div`
     gap: 8px;
 
     #mobileMenu {
-        @media (min-width: 1271px) {
+        @media (min-width: 1301px) {
             display: none;
         }
     }
@@ -149,7 +149,7 @@ export const DesktopItemsContainer = styled.div`
     display: flex;
     gap: 24px;
     margin-left: 24px;
-    @media (max-width: 1270px) {
+    @media (max-width: 1300px) {
         display: none;
     }
 `

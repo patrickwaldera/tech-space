@@ -28,6 +28,7 @@ export const DepartmentsDropDown = styled.div`
     background-color: ${({theme}) => theme.secondary};
     width: 100%;
     border-radius: 0 0 4px 4px;
+    z-index: 8;
     ul {
         display: flex;
         flex-direction: column;
