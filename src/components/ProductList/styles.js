@@ -27,6 +27,9 @@ export const TitleList = styled.div`
 export const List = styled.div`
     width: 100%;
     display: grid;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
 
     grid-template-columns: 1fr;
 
