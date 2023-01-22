@@ -8,7 +8,7 @@ const ProductList = () => {
     <ProductListContainer>
         <TitleList>
             <p>Mais vendidos 🔥</p>
-            <p>Ver todos</p>
+            <a href="">Ver todos</a>
         </TitleList>
         <List>
             <ProductCard rating={2} image={ps5} title={'SSD 120 GB Kingston A400, SATA, Leitura: 500MB/s e Gravação: 320MB/s - SA400S37/120G'} oldprice={'199,90'} price={'12121,90'}/>

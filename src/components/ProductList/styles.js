@@ -18,6 +18,11 @@ export const TitleList = styled.div`
     color: ${({theme}) => theme.textColorBase};
     font-size: 0.875rem;
     font-weight: 500;
+
+    a{
+        color: ${({theme}) => theme.textColorBase};
+        text-decoration: underline;
+    }
 `
 export const List = styled.div`
     width: 100%;
