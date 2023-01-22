@@ -4,8 +4,8 @@ export const MenuMobileContainer = styled.div`
     display: flex;
     justify-content: flex-end;
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(3px);
     z-index: 10;
