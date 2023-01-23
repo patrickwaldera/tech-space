@@ -21,10 +21,10 @@ const Carousel = () => {
         dots={true}
       >
               <CarouselItem>
-                <CarouselImg src={ps5} alt="PlayStation 5" />
+                <CarouselImg src={ps5} alt="PlayStation 5" priority/>
               </CarouselItem>
               <CarouselItem>
-                <CarouselImg src={ps5} alt="PlayStation 5" />
+                <CarouselImg src={ps5} alt="PlayStation 5" priority/>
               </CarouselItem>
         </Slider>
       </CarouselContainer>

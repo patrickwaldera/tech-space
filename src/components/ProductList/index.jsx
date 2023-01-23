@@ -1,5 +1,5 @@
 import { ProductCard } from "../ProductCard"
-import { List, ProductListContainer, TitleList, ViewMore } from "./styles"
+import { List, ProductListContainer, TitleList } from "./styles"
 import ps5 from '../../../public/images/ps5.webp'
 import { Button } from "../Button"
 

@@ -2,39 +2,43 @@
     "departments": [
         {  
             "id": 0,
-            "name": "Hardware"
+            "name": "Hardware",
+            "image": "/categories/category01.png"
         },
         {  
             "id": 1,
-            "name": "Monitores"
+            "name": "Monitores",
+            "image": "/categories/category02.png"
         },
         {  
             "id": 2,
-            "name": "Gabinetes"
+            "name": "Gabinetes",
+            "image": "/categories/category03.png"
         },
         {  
             "id": 3,
-            "name": "Cadeiras Gamer"
+            "name": "Cadeiras Gamer",
+            "image": "/categories/category04.png"
         },
         {  
             "id": 4,
-            "name": "Notebooks"
+            "name": "Notebooks",
+            "image": "/categories/category05.png"
         },
         {  
             "id": 5,
-            "name": "Periféricos"
+            "name": "Periféricos",
+            "image": "/categories/category06.png"
         },
         {  
             "id": 6,
-            "name": "Rede e Internet"
+            "name": "Rede e Internet",
+            "image": "/categories/category07.png"
         },
         {  
             "id": 7,
-            "name": "Video Games"
-        },
-        {  
-            "id": 8,
-            "name": "Softwares"
+            "name": "Video Games",
+            "image": "/categories/category08.png"
         }
     ]
 }

@@ -6,7 +6,7 @@ const ProductCard = ({rating, image, title, oldprice, price}) => {
   return (
     <CardContainer>
         <StarRating ratingStars={rating} />
-        <ProductImg  src={image} alt=""  />
+        <ProductImg  src={image} alt="" priority/>
         <ProductTitle>
             <p>{title}</p>
         </ProductTitle>

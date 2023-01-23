@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ProductListContainer = styled.section`
+export const CategoryListContainer = styled.section`
     max-width: 90%;
     margin: 0 auto;
     display: flex;
@@ -8,7 +8,7 @@ export const ProductListContainer = styled.section`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
+    gap: 8px;
 `
 export const TitleList = styled.div`
     display: flex;
@@ -25,15 +25,14 @@ export const TitleList = styled.div`
         text-decoration: underline;
     }
 `
+
 export const List = styled.div`
     width: 100%;
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
-    place-items: center;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 32px;
 
     margin-bottom: 16px;
 
@@ -49,14 +48,5 @@ export const List = styled.div`
 
     @media (min-width: 1000px) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-    @media (min-width: 1200px) {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-
-    @media (min-width: 1300px) {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        gap: 36px;
     }
 `

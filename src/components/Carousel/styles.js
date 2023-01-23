@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const CarouselContainer = styled.div`
     width: 100%;
     margin: 0 auto;
-    margin-bottom: 2.8rem;
+    margin-bottom: 4.8rem;
     .slick-slide{
         cursor: grab;
     }
