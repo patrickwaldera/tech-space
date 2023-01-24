@@ -61,7 +61,7 @@ const MenuMobile = ({menuIsVisible, setMenuIsVisible}) => {
           </Departments>
           <MenuItem className='departments'>
             <ul>
-              {config.departments.map((department) => <li key={department.id}><a href={`/category/${department.name.toLowerCase()}`}>{department.name}</a></li>)}            
+              {config.departments.map((department) => <li key={department.id}><a href={`/category/${department.name.toLowerCase().normalize('NFD').replace(/\p{Mn}/gu, "")}`}>{department.name}</a></li>)}            
             </ul>
           </MenuItem>
         </MenuItemsContainer>
