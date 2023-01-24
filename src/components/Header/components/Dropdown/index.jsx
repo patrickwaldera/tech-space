@@ -19,7 +19,7 @@ const Dropdown = () => {
         </DepartmentsMenu>
         {showDropdown && <DepartmentsDropDown>
             <ul>
-                {config.departments.map((department) => <li key={department.id}><a href={`/${department.name.toLowerCase()}`}>{department.name}</a></li>)}
+                {config.departments.map((department) => <li key={department.id}><a href={`/category/${department.name.toLowerCase()}`}>{department.name}</a></li>)}
             </ul>
         </DepartmentsDropDown> }
     </DropdownContainer>

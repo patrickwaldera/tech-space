@@ -1,3 +1,4 @@
+import { Header } from "@/components/Header"
 import { useRouter } from "next/router"
 import config from '../../../config.json'
 
@@ -8,7 +9,10 @@ const Product = () => {
   const product = config.products.find(element => element.id == productID);
   
   return (
-    <div>{product?.title}</div>
+    <>
+      <Header />
+      <div>{product?.title}</div>
+    </>
   )
 }
 
