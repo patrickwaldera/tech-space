@@ -7,6 +7,7 @@ export const CategoryContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
 
     .image{
         max-height: 50%;
