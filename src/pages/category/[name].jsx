@@ -1,6 +1,7 @@
 import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
 import { useRouter } from "next/router"
+import { CategoryContainer } from "./styles"
 
 const Category = () => {
     const router = useRouter()
@@ -8,7 +9,9 @@ const Category = () => {
     return (
         <>
             <Header />
-            <div>{category}</div>
+            <CategoryContainer>
+                <div>{category}</div>
+            </CategoryContainer>
             <Footer />
         </>
     )
