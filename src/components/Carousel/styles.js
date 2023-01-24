@@ -30,7 +30,7 @@ export const CarouselImg = styled(Image)`
     width: 100%;
     max-height: 100%;
     object-fit: cover;
-    @media (min-width: 350px) {
+    @media (min-width: 600px) {
         object-fit: contain; 
     }
 `

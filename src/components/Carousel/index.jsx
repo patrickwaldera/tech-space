@@ -1,8 +1,10 @@
 import { CarouselContainer, CarouselImg, CarouselItem } from "./styles";
-import ps5 from '../../../public/banners/ps5.webp'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+
+import techspace from '../../../public/banners/techspace.png'
+import techspace2 from '../../../public/banners/techspace2.png'
 
 const Carousel = () => {
   const settings =  {
@@ -21,10 +23,10 @@ const Carousel = () => {
         dots={true}
       >
               <CarouselItem>
-                <CarouselImg src={ps5} alt="PlayStation 5" priority/>
+                <CarouselImg src={techspace} alt="Tech Space" priority/>
               </CarouselItem>
               <CarouselItem>
-                <CarouselImg src={ps5} alt="PlayStation 5" priority/>
+                <CarouselImg src={techspace2} alt="Tech Space" priority/>
               </CarouselItem>
         </Slider>
       </CarouselContainer>
