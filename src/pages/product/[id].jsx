@@ -2,7 +2,6 @@ import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
 import { useRouter } from "next/router"
 import config from '../../../config.json'
-import { ProductContainer } from "./styles"
 
 const Product = () => {
   const router = useRouter()
@@ -13,9 +12,7 @@ const Product = () => {
   return (
     <>
       <Header />
-      <ProductContainer>
         <div>{product?.title}</div>
-      </ProductContainer>
       <Footer />
     </>
   )
