@@ -1,10 +1,16 @@
+import { Footer } from "@/components/Footer"
+import { Header } from "@/components/Header"
 import { useRouter } from "next/router"
 
 const Category = () => {
     const router = useRouter()
     let category = router.query.name
     return (
-        <div>{category}</div>
+        <>
+            <Header />
+            <div>{category}</div>
+            <Footer />
+        </>
     )
 }
 

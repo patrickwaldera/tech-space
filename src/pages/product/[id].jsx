@@ -1,3 +1,4 @@
+import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
 import { useRouter } from "next/router"
 import config from '../../../config.json'
@@ -12,6 +13,7 @@ const Product = () => {
     <>
       <Header />
       <div>{product?.title}</div>
+      <Footer />
     </>
   )
 }

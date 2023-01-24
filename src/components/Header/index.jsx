@@ -1,7 +1,6 @@
 import {
     HeaderContainer,
     Menu,
-    LogoImg,
     MenuItems,
     SearchBoxMobile,
     SearchBoxDesktop,
@@ -22,6 +21,7 @@ import { Dropdown } from './components/Dropdown'
 import { ChangeThemeBtn } from './components/ChangeThemeBtn'
 import { MenuMobile } from './components/MenuMobile'
 import { useState } from 'react'
+import Link from 'next/link'
 
 const Header = () => {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
@@ -31,13 +31,13 @@ const Header = () => {
             menuIsVisible={menuIsVisible}
             setMenuIsVisible={setMenuIsVisible}
         />
-        <HeaderContainer>
+        <HeaderContainer id='index'>
             <div className='wrapper'>
                 <Menu>
                     <div className='leftWrapper'>
-                        <LogoImg>
-                            <Image id='logo' src={logo} alt='Tech Space' priority/>
-                        </LogoImg>
+                        <Link href='/'>
+                            <Image src={logo} alt='Tech Space' priority/>
+                        </Link>
                         <DesktopMenu>
                             <SearchBoxDesktop>
                                 <MdOutlineSearch className='searchIcon' size={32}/>

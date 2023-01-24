@@ -34,10 +34,6 @@ export const Menu = styled.div`
     }
 `
 
-export const LogoImg = styled.div`
-    max-width: 100%;
-`
-
 export const MenuItems = styled.div`
     max-width: 100%;
     height: 100%;
