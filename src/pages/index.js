@@ -10,7 +10,7 @@ const Home = () => {
     <>
       <Header />
       <Carousel />
-      <ProductList title={'Mais vendidos 🔥'} text={'Ver todos'} showBtn={false} products={productsList} orderBy={'bestSellers'} />
+      <ProductList title={'Mais vendidos 🔥'} text={'Ver todos'} showBtn={false} products={productsList} orderBy={'bestSellers'} showMaxItens={6} />
       <CategoryList />
       <ProductList title={'Mais produtos 🚀 '} text={'Ver mais'} products={productsList}/>
     </>

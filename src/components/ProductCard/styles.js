@@ -28,6 +28,7 @@ export const ProductImg = styled(Image)`
     @media (min-width: 600px) {
         height: 108px !important; 
     }
+    cursor: pointer;
 `
 
 export const ProductTitle = styled.div`

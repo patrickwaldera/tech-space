@@ -56,7 +56,7 @@
                 "/products/"
             ],
             "category": "hardware",
-            "brand": "Kingston",
+            "brand": "kingston",
             "rating": 4,
             "stock": 30,
             "sold": 1
@@ -75,7 +75,7 @@
                 "/products/"
             ],
             "category": "gabinetes",
-            "brand": "Redragon",
+            "brand": "redragon",
             "rating": 5,
             "stock": 30,
             "sold": 5
@@ -94,14 +94,14 @@
                 "/products/"
             ],
             "category": "cadeiras",
-            "brand": "Husky",
+            "brand": "husky",
             "rating": 3,
             "stock": 20,
             "sold": 0
         },
         {
             "id": 3,
-            "title": "Placa de Vídeo GTX 1660 Super Twin Fan Zotac Gaming NVIDIA GeForce, 6 GB GDDR6 - ZT-T16620F-10L",
+            "title": "Placa de Vídeo GTX 1660 Super Twin Fan Zotac Gaming NVIDIA GeForce, 6 GB GDDR6",
             "description": "A nova geração de placas gráficas ZOTAC GAMING GeForce GTX SUPER está aqui. Com base na nova arquitetura NVIDIA Turing, prepare-se para ser rápido e forte no jogo, design super compacto e design de ventoinha com deslocamento duplo totalmente pronto para 4K / HDR / VR e utilitário FireStorm",
             "price": 1439.99,
             "oldprice": 0,
@@ -113,7 +113,7 @@
                 "/products/"
             ],
             "category": "hardware",
-            "brand": "Zotac",
+            "brand": "zotac",
             "rating": 4,
             "stock": 20,
             "sold": 8
@@ -132,7 +132,7 @@
                 "/products/"
             ],
             "category": "perifericos",
-            "brand": "Razer",
+            "brand": "razer",
             "rating": 5,
             "stock": 20,
             "sold": 6
@@ -151,10 +151,124 @@
                 "/products/"
             ],
             "category": "perifericos",
-            "brand": "Gamdias",
+            "brand": "gamdias",
             "rating": 4,
             "stock": 20,
             "sold": 4
+        },
+        {
+            "id": 6,
+            "title": "Placa de Vídeo GTX 1660 Super Ventus XS OC MSI NVIDIA GeForce, 6GB",
+            "description": "Apresentando execução simultânea de operações de ponto flutuante e número inteiro, tecnologia de sombreamento adaptável e uma nova arquitetura de memória unificada com o dobro do cache de seu antecessor, os sombreadores de Turing possibilitam aumentos de desempenho impressionantes nos jogos de hoje. Obtenha 1.4X de eficiência de energia em relação à geração anterior para uma experiência de jogo mais rápida, mais fria e silenciosa. A GeForce GTX SUPER Series possui memória GDDR6 ultrarrápida, oferecendo desempenho até 50% mais rápido que o GTX 16 Series original e até 2X mais rápida que as GPUs da série 10 da geração anterior. É hora de se preparar e ficar SUPER. Os jogos Battle Royale exigem FPS máximo. Obtenha a vantagem competitiva necessária com a GeForce. Com um novo design de ventilador duplo, o VENTUS exibe orgulhosamente suas formas industriais em cores neutras para se adaptar a qualquer construção. Usando duas das premiadas ventoinhas TORX 2.0, as placas gráficas MSI VENTUS oferecem anos de desempenho de resfriamento de alto nível. A lâmina do ventilador de dispersão possui uma lâmina curva mais íngreme que acelera o fluxo de ar, aumentando sua eficácia. Uma placa traseira robusta ajuda a fortalecer a placa de vídeo e complementa o design para parecer ainda melhor. A resolução ultra-alta (UHD) oferece 4x a resolução de conteúdo 1080p, permitindo imagens muito mais nítidas e com detalhes delicados durante os jogos. O High Dynamic Range (HDR) aprimora o mundo dos seus jogos com maior contraste e cores mais brilhantes do que você já viu antes.",
+            "price": 1569.99,
+            "oldprice": 0,
+            "images": [
+                "/products/7placa.jpg",
+                "/products/",
+                "/products/",
+                "/products/",
+                "/products/"
+            ],
+            "category": "hardware",
+            "brand": "msi",
+            "rating": 4,
+            "stock": 40,
+            "sold": 5
+        },
+        {
+            "id": 7,
+            "title": "Processador AMD Ryzen 5 5600X, 3.7GHz (4.6GHz Max Turbo)",
+            "description": "Processador AMD Ryzen 5 5600X Jogue com os melhores 6 núcleos incríveis para quem quer apenas jogar. Imbatível no jogo Obtenha o desempenho de jogos de alta velocidade do melhor processador de desktop do mundo. AMD Ryzen para criadores Codifique mais rápido. Renderize mais rápido. Repita mais rápido. Crie mais e mais rápido com os processadores AMD Ryzen™. Desempenho de próximo nível para arquitetos, engenheiros e profissionais criativos Imagine o que você pode fazer com o processador mais avançado do mundo.",
+            "price": 2334.21,
+            "oldprice": 0,
+            "images": [
+                "/products/8ryzen.jpg",
+                "/products/",
+                "/products/",
+                "/products/",
+                "/products/"
+            ],
+            "category": "hardware",
+            "brand": "amd",
+            "rating": 4,
+            "stock": 40,
+            "sold": 8
+        },
+        {
+            "id": 8,
+            "title": "Notebook Gamer Acer Nitro 5 AMD Ryzen 7 5800H / GTX 1650 4GB",
+            "description": "Notebook Gamer Acer Nitro 5, AMD Ryzen 7, 8GB RAM, SSD 512GB, 15.6 Full HD, GTX 1650, Windows 11 Home - AN515-45-R1FQ.",
+            "price": 4999.00,
+            "oldprice": 0,
+            "images": [
+                "/products/9nitro5.jpg",
+                "/products/",
+                "/products/",
+                "/products/",
+                "/products/"
+            ],
+            "category": "notebooks",
+            "brand": "acer",
+            "rating": 4,
+            "stock": 40,
+            "sold": 9
+        },
+        {
+            "id": 9,
+            "title": "Cadeira Gamer SuperFrame Mesh, Reclinável, Preto",
+            "description": "CADEIRA GAMER SUPERFRAME MESH, RECLINÁVEL, SUPORTA ATÉ 140KG, PRETO, MESH.",
+            "price": 799.90,
+            "oldprice": 1099.90,
+            "images": [
+                "/products/10cadeira.webp",
+                "/products/",
+                "/products/",
+                "/products/",
+                "/products/"
+            ],
+            "category": "cadeiras",
+            "brand": "superframe",
+            "rating": 4,
+            "stock": 40,
+            "sold": 7
+        },
+        {
+            "id": 10,
+            "title": "Monitor Gamer LG 26 IPS, Ultra Wide, 75Hz, Full HD",
+            "description": "Multitarefa sem minimizar: Mantenha tudo em uma tela com a marca de monitores UltraWide nº 1 nos EUA por 4 anos consecutivos*.",
+            "price": 899.99,
+            "oldprice": 1119.90,
+            "images": [
+                "/products/10monitor.jpg",
+                "/products/",
+                "/products/",
+                "/products/",
+                "/products/"
+            ],
+            "category": "monitores",
+            "brand": "lg",
+            "rating": 4,
+            "stock": 40,
+            "sold": 11
+        },
+        {
+            "id": 11,
+            "title": "Headset Gamer Havit, Drivers 53mm",
+            "description": "Headset Gamer Havit H2002D Aparência e textura proporcionais, simples e generosas. Jaqueta de liga leve com frente e superfície de plástico com revestimento de piano. Design Gamer em preto, para combinar com seu setup e além de ter qualidade surpreendente por um preço baixo. Head set Gamer Havit com excelente custo benefício. Desempenho e Compatibilidade com PC, PS4 e XBOX Faixa de cabeça ajustável suspensa única, design ergonômico, confortável de usar, antiviolência e não fácil de danificar. À prova de desgaste, resistente a arranhões e atualizado e adequado para pessoas diferentes, o peso de toda a máquina é moderado, desgastando por muito tempo sem pressão. Microfone plugável de 3,5 mm compatível para PC, PS4 e XBOX e Alto-falante magnético de 53 mm de alta qualidade de som para distinguir o som dos jogos e a frequência fracionária alta e baixa meticulosa ao ouvir música. Headset Gamer Havit está no KaBuM!",
+            "price": 299.99,
+            "oldprice": 199.99,
+            "images": [
+                "/products/11headset.jpg",
+                "/products/",
+                "/products/",
+                "/products/",
+                "/products/"
+            ],
+            "category": "perifericos",
+            "brand": "havit",
+            "rating": 5,
+            "stock": 40,
+            "sold": 8
         }
     ]
 }
