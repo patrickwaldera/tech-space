@@ -1,5 +1,5 @@
 import { CarouselContainer, CarouselImg, CarouselItem } from "./styles";
-import ps5 from '../../../public/images/ps5.webp'
+import ps5 from '../../../public/banners/ps5.webp'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'

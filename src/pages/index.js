@@ -1,16 +1,18 @@
 import { Carousel } from "@/components/Carousel";
-import { CategoryCard } from "@/components/CategoryCard";
 import { CategoryList } from "@/components/CategoryList";
 import { Header } from "@/components/Header";
 import { ProductList } from "@/components/ProductList";
+import config from '../../config.json'
 
 const Home = () => {
+  const productsList = config.products;
   return (
     <>
       <Header />
       <Carousel />
-      <ProductList />
+      <ProductList title={'Mais vendidos 🔥'} text={'Ver todos'} showBtn={false} products={productsList} orderBy={'bestSellers'} />
       <CategoryList />
+      <ProductList title={'Mais produtos 🚀 '} text={'Ver mais'} products={productsList}/>
     </>
   )
 }

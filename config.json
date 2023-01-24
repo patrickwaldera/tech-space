@@ -40,5 +40,121 @@
             "name": "Video Games",
             "image": "/categories/category08.png"
         }
+    ],
+    "products": [
+        {
+            "id": 0,
+            "title": "SSD 120 GB Kingston A400, SATA, Leitura: 500MB/s e Gravação: 320MB/s - SA400S37/120G",
+            "description": "Desempenho até 10x mais rápido que um HD convencional, uma vez que não possui disco, pode ser transportado para qualquer lugar sem risco de perder seus arquivos e informações, além de ter uma durabilidade maior ele exige menos energia para operar, aumentando a vida útil da bateria do seu notebook",
+            "price": 129.99,
+            "oldprice": 199.99,
+            "images": [
+                "/products/1ssd.jpg",
+                "/products/",
+                "/products/",
+                "/products/",
+                "/products/"
+            ],
+            "category": "hardware",
+            "brand": "Kingston",
+            "rating": 4,
+            "stock": 30,
+            "sold": 1
+        },
+        {
+            "id": 1,
+            "title": "Gabinete Gamer Redragon Grapple, Mid Tower, RGB, Lateral em Vidro, Preto - GC-607BK",
+            "description": "Gabinete Gamer Redragon Grapple, Mid Tower, RGB, Lateral em Vidro - GC-607BK",
+            "price": 319.99,
+            "oldprice": 0,
+            "images": [
+                "/products/2gabregradon.jpg",
+                "/products/",
+                "/products/",
+                "/products/",
+                "/products/"
+            ],
+            "category": "gabinetes",
+            "brand": "Redragon",
+            "rating": 5,
+            "stock": 30,
+            "sold": 5
+        },
+        {
+            "id": 2,
+            "title": "Cadeira Gamer Husky Gaming Tempest 700, Preto, Com Almofadas, Retrátil, Reclinável - HGMA074",
+            "description": "Tenha horas incríveis desfrutando seu gameplay de maneira confortável e aconchegante! Feito com espuma de altíssima densidade e PU, a Cadeira Husky Gaming Tempest 700 possui descanso para os pés, ideal para aquela pausa entre um jogo e outro! Além do design moderno e robusto, a cadeira proporciona ótima performance nas partidas devido a sensação de conforto que é convertida em foco e concentração, tudo que um gamer de verdade precisa para ser o melhor!",
+            "price": 1099.99,
+            "oldprice": 1263.15,
+            "images": [
+                "/products/3cadeira.jpg",
+                "/products/",
+                "/products/",
+                "/products/",
+                "/products/"
+            ],
+            "category": "cadeiras",
+            "brand": "Husky",
+            "rating": 3,
+            "stock": 20,
+            "sold": 0
+        },
+        {
+            "id": 3,
+            "title": "Placa de Vídeo GTX 1660 Super Twin Fan Zotac Gaming NVIDIA GeForce, 6 GB GDDR6 - ZT-T16620F-10L",
+            "description": "A nova geração de placas gráficas ZOTAC GAMING GeForce GTX SUPER está aqui. Com base na nova arquitetura NVIDIA Turing, prepare-se para ser rápido e forte no jogo, design super compacto e design de ventoinha com deslocamento duplo totalmente pronto para 4K / HDR / VR e utilitário FireStorm",
+            "price": 1439.99,
+            "oldprice": 0,
+            "images": [
+                "/products/4placazotac.jpg",
+                "/products/",
+                "/products/",
+                "/products/",
+                "/products/"
+            ],
+            "category": "hardware",
+            "brand": "Zotac",
+            "rating": 4,
+            "stock": 20,
+            "sold": 8
+        },
+        {
+            "id": 4,
+            "title": "Mouse Gamer Razer Deathadder Essential, 5 Botões Programáveis, 6400 DPI, RZ01-03850100-R3U1",
+            "description": "A nova geração de placas gráficas ZOTAC GAMING GeForce GTX SUPER está aqui. Com base na nova arquitetura NVIDIA Turing, prepare-se para ser rápido e forte no jogo, design super compacto e design de ventoinha com deslocamento duplo totalmente pronto para 4K / HDR / VR e utilitário FireStorm",
+            "price": 299.99,
+            "oldprice": 349.99,
+            "images": [
+                "/products/5mouserazer.jpg",
+                "/products/",
+                "/products/",
+                "/products/",
+                "/products/"
+            ],
+            "category": "perifericos",
+            "brand": "Razer",
+            "rating": 5,
+            "stock": 20,
+            "sold": 6
+        },
+        {
+            "id": 5,
+            "title": "Teclado Mecânico Gamer Gamdias Hermes E2 Led White, Switch Red, ABNT2, TKL, HERMES E2 BR-RED",
+            "description": "Teclado Mecânico Gamer Gamdias Hermes E2, LED Branco, Swith Huano Red, Layout ABNT2, Preto - HERMES E2 BR-RED",
+            "price": 189.99,
+            "oldprice": 149.99,
+            "images": [
+                "/products/6teclado.jpg",
+                "/products/",
+                "/products/",
+                "/products/",
+                "/products/"
+            ],
+            "category": "perifericos",
+            "brand": "Gamdias",
+            "rating": 4,
+            "stock": 20,
+            "sold": 4
+        }
     ]
 }

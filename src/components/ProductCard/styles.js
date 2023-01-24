@@ -11,20 +11,22 @@ export const CardContainer = styled.div`
     background-color: ${({theme}) => theme.backgroundLevel1};
     border-radius: 4px;
     padding-bottom: 1rem;
+    position: relative !important;
     @media (min-width: 600px) {
         max-width: 220px;    
     }
 `
 
 export const ProductImg = styled(Image)`
-    width: 100%;
-    height: 88px;
+    width: 100% !important;
+    height: 88px !important;
     border: 0;
     border-radius: 4px;
     outline: none;
-    object-fit: cover;
+    object-fit: contain !important;
+    position: relative !important;
     @media (min-width: 600px) {
-        height: 108px; 
+        height: 108px !important; 
     }
 `
 
