@@ -32,7 +32,7 @@ export const List = styled.div`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 28px;
+    gap: 32px;
 
     margin-bottom: 16px;
 
