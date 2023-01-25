@@ -5,7 +5,7 @@ import {
     DepartmentsDropDown
 } from './styles'
 
-import config from '../../../../../config.json'
+import config from '/config.json'
 
 
 const Dropdown = () => {

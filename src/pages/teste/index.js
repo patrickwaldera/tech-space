@@ -1,17 +1,12 @@
-import { ColorModeContext } from "@/components/ColorMode";
-import { useContext } from "react";
+import { Loading } from '@/components/Loading';
+import { useState, useEffect } from 'react';
 
 const Teste = () => {
-  const contexto = useContext(ColorModeContext);
-  return (
-    <div>
-      teste
-      <button onClick={contexto.toggleTheme}>
-        setMode
-      </button>
-    </div>
-    
-  )
+    return (
+      <>
+        <Loading />
+      </>
+    );
 }
 
 export default Teste;

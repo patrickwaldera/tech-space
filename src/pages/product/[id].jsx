@@ -5,16 +5,34 @@ import { useRouter } from "next/router"
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import config from '../../../config.json'
 import { StarRating } from "@/components/StarRating"
 import { Button } from "@/components/Button"
 import { ProductList } from "@/components/ProductList"
+import { useEffect, useState } from "react"
+import { Loading } from "@/components/Loading"
 
 const Product = () => {
   const router = useRouter()
-  const productID = router.query.id  
-  
-  const product = config.products.find(element => element.id == productID);
+  const productID = router.query.id
+
+  const [data, setData] = useState(null);
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      const res = await fetch('/config.json');
+      const json = await res.json();
+      setData(json);
+      const foundProduct = json.products.find(element => element.id == productID);
+      setProduct(foundProduct);
+    }
+
+    fetchData();
+  }, [productID]);
+
+  if (!data) {
+    return <Loading />;
+  }
   
   const settings = {
     customPaging: function(i) {
@@ -75,7 +93,7 @@ const Product = () => {
             </div>
           </ProductInfo>
         </ProductContainer>
-        <ProductList title={'Mais produtos 🚀 '} text={'Ver mais'} products={config.products}/>
+        <ProductList title={'Mais produtos 🚀 '} text={'Ver mais'} products={data.products}/>
       <Footer />
     </>
   )

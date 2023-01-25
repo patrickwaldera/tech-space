@@ -12,7 +12,7 @@ import {
   MdAccountCircle,
   MdOutlineFavorite
 } from 'react-icons/md'
-import config from '../../../../../config.json'
+import config from '/config.json'
 import { useEffect, useRef } from "react"
 
 const MenuMobile = ({menuIsVisible, setMenuIsVisible}) => {

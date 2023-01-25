@@ -1,6 +1,6 @@
 import { CategoryCard } from "../CategoryCard"
 import { CategoryListContainer, List, TitleList } from "./style"
-import config from '../../../config.json'
+import config from '/config.json'
 
 const CategoryList = () => {
   return (
