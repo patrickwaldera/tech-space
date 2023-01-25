@@ -15,12 +15,12 @@ const ProductCard = ({id, rating, image, title, oldprice, price}) => {
         <CustAndBuy>
             <ProductPrice>
                 {oldprice !== 0 ? 
-                    <p className='old-price'>de: <span>R$ {oldprice}</span> por:</p>
+                    <p className='old-price'>de: <span>R$ {oldprice.toLocaleString("pt-br", {style:"decimal", minimumFractionDigits: 2})}</span> por:</p>
                 :               
                     <p className='old-price'>-</p>
                 }
                 <div className='price'>
-                    <p>R$ <strong>{price}</strong></p>
+                    <p>R$ <strong>{price.toLocaleString("pt-br", {style:"decimal", minimumFractionDigits: 2})}</strong></p>
                     <p>à vista</p>
                 </div>
             </ProductPrice>

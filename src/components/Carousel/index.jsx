@@ -7,9 +7,6 @@ import techspace from '../../../public/banners/techspace.png'
 import techspace2 from '../../../public/banners/techspace2.png'
 
 const Carousel = () => {
-  const settings =  {
-    
-  };
   return (
     <>
       <CarouselContainer>
