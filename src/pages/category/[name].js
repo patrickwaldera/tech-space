@@ -31,9 +31,9 @@ const Category = () => {
                         <div className="order-by">
                             <p>Ordenar por: </p>
                             <select onChange={handleSortOrderChange}>
-                                <option value={'bestSellers'}>Mais Vendidos</option>
-                                <option value={'bestRated'}>Mais avaliados</option>
-                                <option value={'priceAsc'}>Preço cescrente</option>
+                                <option value={'bestSellers'}>Mais vendidos</option>
+                                <option value={'bestRated'}>Melhor avaliados</option>
+                                <option value={'priceAsc'}>Preço crescente</option>
                                 <option value={'priceDesc'} >Preço decrescente</option>
                             </select>
                         </div>                    

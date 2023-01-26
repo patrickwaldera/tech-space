@@ -3,9 +3,10 @@ import styled from "styled-components";
 export const CategoryPageContainer = styled.section`
     margin: 0 auto;
     max-width: 90%;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     .category-title {
         text-transform: capitalize;
