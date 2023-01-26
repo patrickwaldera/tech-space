@@ -16,6 +16,7 @@ const Category = () => {
     const handleSortOrderChange = (event) => {
         setOrder(event.target.value)
     }
+
     return (
         <>
             <Header />
@@ -23,16 +24,22 @@ const Category = () => {
                     <div className="category-title">
                         <h1>{category}</h1>
                     </div>
-                    <div className="order-by">
-                        <p>Ordenar por: </p>
-                        <select onChange={handleSortOrderChange}>
-                            <option value={'bestSellers'}>Mais Vendidos</option>
-                            <option value={'bestRated'}>Mais avaliados</option>
-                            <option value={'priceAsc'}>Preço cescrente</option>
-                            <option value={'priceDesc'} >Preço decrescente</option>
-                        </select>
-                    </div>
-                    <ProductList showTitle={false} text={'Ver mais'} products={productsFiltered} orderBy={order} />
+                    {productsFiltered.length === 0 ? 
+                        <h2>Nehum produto encontrado!</h2>
+                    :
+                    <> 
+                        <div className="order-by">
+                            <p>Ordenar por: </p>
+                            <select onChange={handleSortOrderChange}>
+                                <option value={'bestSellers'}>Mais Vendidos</option>
+                                <option value={'bestRated'}>Mais avaliados</option>
+                                <option value={'priceAsc'}>Preço cescrente</option>
+                                <option value={'priceDesc'} >Preço decrescente</option>
+                            </select>
+                        </div>                    
+                        <ProductList showTitle={false} text={'Ver mais'} products={productsFiltered} orderBy={order} />
+                    </>
+                    }
                 </CategoryPageContainer>
             <Footer />
         </>
