@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md';
-import { ColorModeContext } from "@/components/ColorMode";
+import { ColorModeContext } from "@/context/ColorMode";
 import { ChangeThemeContainer } from './styles'
 
 const ChangeThemeBtn = () => {

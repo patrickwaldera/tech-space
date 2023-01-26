@@ -8,31 +8,16 @@ import 'slick-carousel/slick/slick-theme.css'
 import { StarRating } from "@/components/StarRating"
 import { Button } from "@/components/Button"
 import { ProductList } from "@/components/ProductList"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Loading } from "@/components/Loading"
+import { ProductsListContext } from "@/context/ProductList"
 
 const Product = () => {
   const router = useRouter()
   const productID = router.query.id
 
-  const [data, setData] = useState(null);
-  const [product, setProduct] = useState(null);
-
-  useEffect(() => {
-    async function fetchData() {
-      const res = await fetch('/config.json');
-      const json = await res.json();
-      setData(json);
-      const foundProduct = json.products.find(element => element.id == productID);
-      setProduct(foundProduct);
-    }
-
-    fetchData();
-  }, [productID]);
-
-  if (!data) {
-    return <Loading />;
-  }
+  const { products } = useContext(ProductsListContext);
+  const product = products.find(product => product.id == productID);
   
   const settings = {
     customPaging: function(i) {
@@ -93,7 +78,7 @@ const Product = () => {
             </div>
           </ProductInfo>
         </ProductContainer>
-        <ProductList title={'Mais produtos 🚀 '} text={'Ver mais'} products={data.products}/>
+        <ProductList title={'Mais produtos 🚀 '} text={'Ver mais'} products={products}/>
       <Footer />
     </>
   )

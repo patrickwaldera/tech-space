@@ -33,6 +33,7 @@ export const ProductImg = styled(Image)`
 
 export const ProductTitle = styled.div`
     width: 100%;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,6 +44,9 @@ export const ProductTitle = styled.div`
             font-size: 0.875rem;  
             line-height: 1.2rem;
         }
+    }
+    @media (min-width: 600px) {
+        height: 80px;
     }
 `
 export const CustAndBuy = styled.div`
