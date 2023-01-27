@@ -10,7 +10,9 @@ const Search = () => {
     const router = useRouter()
     let search = router.query.product
     const { products } = useContext(ProductsListContext);
-    const productsFiltered = products.filter(product => product.title.toLowerCase().includes(search))
+    const productsFiltered = products.filter((product) => {
+        return product.title.toLowerCase().includes(search) || product.category.toLowerCase().includes(search)
+    })
     const [ order, setOrder] = useState('bestSellers')
 
     const handleSortOrderChange = (event) => {
