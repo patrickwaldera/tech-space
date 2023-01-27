@@ -22,9 +22,17 @@ import { ChangeThemeBtn } from './components/ChangeThemeBtn'
 import { MenuMobile } from './components/MenuMobile'
 import { useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Header = () => {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
+  const [search, setSearch] = useState('');
+  const router = useRouter();
+
+  const handleSearch = () => {
+    router.push(`/search/${search.toLowerCase().normalize('NFD').replace(/\p{Mn}/gu, "")}`)
+  }
+
   return (
     <>
         <MenuMobile
@@ -41,7 +49,7 @@ const Header = () => {
                         <DesktopMenu>
                             <SearchBoxDesktop>
                                 <MdOutlineSearch className='searchIcon' size={32}/>
-                                <input type="text" placeholder='O que você procura? Digite aqui' />
+                                <input type="text" placeholder='O que você procura? Digite aqui' value={search} onChange={(e) => setSearch(e.target.value)} onKeyDown={e => e.key === 'Enter' ? handleSearch() : ''}/>
                             </SearchBoxDesktop>
                             <Dropdown />
                         </DesktopMenu>
@@ -69,7 +77,7 @@ const Header = () => {
                 </Menu>
                 <SearchBoxMobile>
                     <MdOutlineSearch className='searchIcon' size={20}/>
-                    <input type="text" placeholder='O que você procura? Digite aqui' />
+                    <input type="text" placeholder='O que você procura? Digite aqui' value={search} onChange={(e) => setSearch(e.target.value)} onKeyDown={e => e.key === 'Enter' ? handleSearch() : ''}/>
                 </SearchBoxMobile>
             </div>
         </HeaderContainer>

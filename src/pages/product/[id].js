@@ -8,8 +8,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import { StarRating } from "@/components/StarRating"
 import { Button } from "@/components/Button"
 import { ProductList } from "@/components/ProductList"
-import { useContext, useEffect, useState } from "react"
-import { Loading } from "@/components/Loading"
+import { useContext } from "react"
 import { ProductsListContext } from "@/context/ProductList"
 
 const Product = () => {
