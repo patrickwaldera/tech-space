@@ -22,7 +22,7 @@ const Search = () => {
             <Header />
                 <SearchPageContainer>
                     <div className="search-text">
-                        <h1>Resultados da busca por: "{search}"</h1>
+                        <h1>Resultados da busca por: {`"${search}"`}</h1>
                     </div>
                     {productsFiltered.length === 0 ? 
                         <h2>Nehum produto encontrado!</h2>

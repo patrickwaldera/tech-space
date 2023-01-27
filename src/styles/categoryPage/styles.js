@@ -9,7 +9,7 @@ export const CategoryPageContainer = styled.section`
     justify-content: flex-start;
     align-items: center;
     .category-title {
-        text-transform: capitalize;
+        text-transform: uppercase;
         margin-bottom: 2rem;
         h1 {
             font-size: 1.5rem;
