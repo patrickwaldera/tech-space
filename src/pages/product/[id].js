@@ -10,6 +10,7 @@ import { Button } from "@/components/Button"
 import { ProductList } from "@/components/ProductList"
 import { useContext } from "react"
 import { ProductsListContext } from "@/context/ProductList"
+import { NotFound } from "@/components/NotFound"
 
 const Product = () => {
   const router = useRouter()
@@ -37,47 +38,54 @@ const Product = () => {
     <>
       <Header />
         <ProductContainer>
-          <ProductImages>
-            <Slider className="carousel-product" {...settings}>
-              <div>
-                <ProductImg src={product?.images[0]} fill sizes="100%" alt='' />
+        {product ? 
+          <>
+            
+            <ProductImages>
+              <Slider className="carousel-product" {...settings}>
+                <div>
+                  <ProductImg src={product?.images[0]} fill sizes="100%" alt='' />
+                </div>
+                <div>
+                  <ProductImg src={product?.images[0]} fill sizes="100%" alt='' />
+                </div>
+                <div>
+                  <ProductImg src={product?.images[0]} fill sizes="100%" alt='' />
+                </div>
+                <div>
+                  <ProductImg src={product?.images[0]} fill sizes="100%" alt='' />
+                </div>
+              </Slider>
+            </ProductImages>
+            <ProductInfo>
+              <h1>{product?.title}</h1>
+              <div className="brand-stars">
+                <p className="brand">Marca: {product?.brand.toUpperCase()}</p>
+                <StarRating ratingStars={product?.rating} />
               </div>
-              <div>
-                <ProductImg src={product?.images[0]} fill sizes="100%" alt='' />
+              <p>{product?.description}</p>
+              <div className="price">
+                {product?.oldprice !== 0 ? 
+                        <p className='old-price'>de: <span>R$ {product?.oldprice.toLocaleString("pt-br", {style:"decimal", minimumFractionDigits: 2})}</span> por:</p>
+                    :               
+                        <p className='old-price'>-</p>
+                    }
+                    <div className='price'>
+                        <p>R$ <strong>{product?.price.toLocaleString("pt-br", {style:"decimal", minimumFractionDigits: 2})}</strong></p>
+                        <p>à vista no boleto ou PIX</p>
+                    </div>
               </div>
-              <div>
-                <ProductImg src={product?.images[0]} fill sizes="100%" alt='' />
+              <div className="btn">
+                    <Button text={'ADICIONAR AO CARRINHO'} size={'1rem'} width={'100%'} outlined/>
+                    <Button text={'COMPRAR'} size={'1rem'} width={'100%'}/>
               </div>
-              <div>
-                <ProductImg src={product?.images[0]} fill sizes="100%" alt='' />
-              </div>
-            </Slider>
-          </ProductImages>
-          <ProductInfo>
-            <h1>{product?.title}</h1>
-            <div className="brand-stars">
-              <p className="brand">Marca: {product?.brand.toUpperCase()}</p>
-              <StarRating ratingStars={product?.rating} />
-            </div>
-            <p>{product?.description}</p>
-            <div className="price">
-              {product?.oldprice !== 0 ? 
-                      <p className='old-price'>de: <span>R$ {product?.oldprice.toLocaleString("pt-br", {style:"decimal", minimumFractionDigits: 2})}</span> por:</p>
-                  :               
-                      <p className='old-price'>-</p>
-                  }
-                  <div className='price'>
-                      <p>R$ <strong>{product?.price.toLocaleString("pt-br", {style:"decimal", minimumFractionDigits: 2})}</strong></p>
-                      <p>à vista no boleto ou PIX</p>
-                  </div>
-            </div>
-            <div className="btn">
-                  <Button text={'ADICIONAR AO CARRINHO'} size={'1rem'} width={'100%'} outlined/>
-                  <Button text={'COMPRAR'} size={'1rem'} width={'100%'}/>
-            </div>
-          </ProductInfo>
+            </ProductInfo>
+          <ProductList title={'Mais produtos 🚀 '} text={'Ver mais'} products={products}/>
+          </>
+        :
+          <NotFound text={'Produto não encontrado!'} /> 
+        }
         </ProductContainer>
-        <ProductList title={'Mais produtos 🚀 '} text={'Ver mais'} products={products}/>
       <Footer />
     </>
   )

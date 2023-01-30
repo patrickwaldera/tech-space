@@ -1,19 +1,25 @@
 import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
-import { Loading } from "@/components/Loading"
 import { NotFound } from "@/components/NotFound"
 import { ProductList } from "@/components/ProductList"
 import { ProductsListContext } from "@/context/ProductList"
 import { CategoryPageContainer } from "@/styles/categoryPage/styles"
 import { useRouter } from "next/router"
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import config from '../../../config.json'
 
 const Category = () => {
     const router = useRouter()
-    let category = router.query.name
-
-    const categoryIsValid = config.departments.find(department => department.name.toLowerCase() == category)
+    let category = router.query.name 
+    const [categoryIsValid, setCategoryIsValid] = useState(false)
+    
+    useEffect(() => {
+        if(config.departments.find(department => department.name.toLowerCase().normalize('NFD').replace(/\p{Mn}/gu, "") == category))
+        {
+            setCategoryIsValid(true)
+        }
+    }, [category])
+    
 
     const { products } = useContext(ProductsListContext);
     const productsFiltered = products.filter((product) => product.category == category)
@@ -50,7 +56,7 @@ const Category = () => {
                             }
                         </>
                     :
-                    <NotFound text={'Categoria não encontrada!'} /> 
+                        <NotFound text={'Categoria não encontrada!'} />                      
                     }
                 </CategoryPageContainer>
             <Footer />

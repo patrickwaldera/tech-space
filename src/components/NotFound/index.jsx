@@ -19,7 +19,7 @@ const NotFound = ({text}) => {
                 </Link>
             </div>
             <div>
-                <AstronautImage src={astronaut} alt="" fill sizes="100%"/>
+                <AstronautImage src={astronaut} alt="" fill sizes="100%" loading="lazy" />
             </div>
         </NotFoundContainer>
         <ProductList title={'Mais produtos 🚀 '} text={'Ver mais'} products={products}/>
