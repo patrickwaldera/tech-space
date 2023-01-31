@@ -50,10 +50,9 @@
             "oldprice": 199.99,
             "images": [
                 "/products/1ssd.jpg",
-                "/products/",
-                "/products/",
-                "/products/",
-                "/products/"
+                "/products/1ssd2.jpg",
+                "/products/1ssd3.jpg",
+                "/products/1ssd4.jpg"
             ],
             "category": "hardware",
             "brand": "kingston",
@@ -69,10 +68,9 @@
             "oldprice": 0,
             "images": [
                 "/products/2gabregradon.jpg",
-                "/products/",
-                "/products/",
-                "/products/",
-                "/products/"
+                "/products/2gabregradon2.jpg",
+                "/products/2gabregradon3.jpg",
+                "/products/2gabregradon4.jpg"
             ],
             "category": "gabinetes",
             "brand": "redragon",
@@ -88,12 +86,11 @@
             "oldprice": 1263.15,
             "images": [
                 "/products/3cadeira.jpg",
-                "/products/",
-                "/products/",
-                "/products/",
-                "/products/"
+                "/products/3cadeira2.jpg",
+                "/products/3cadeira3.jpg",
+                "/products/3cadeira4.jpg"
             ],
-            "category": "cadeiras",
+            "category": "cadeiras gamer",
             "brand": "husky",
             "rating": 3,
             "stock": 20,
@@ -107,10 +104,9 @@
             "oldprice": 0,
             "images": [
                 "/products/4placazotac.jpg",
-                "/products/",
-                "/products/",
-                "/products/",
-                "/products/"
+                "/products/4placazotac2.jpg",
+                "/products/4placazotac3.jpg",
+                "/products/4placazotac4.jpg"
             ],
             "category": "hardware",
             "brand": "zotac",
@@ -126,10 +122,9 @@
             "oldprice": 349.99,
             "images": [
                 "/products/5mouserazer.jpg",
-                "/products/",
-                "/products/",
-                "/products/",
-                "/products/"
+                "/products/5mouserazer2.jpg",
+                "/products/5mouserazer3.jpg",
+                "/products/5mouserazer4.jpg"
             ],
             "category": "perifericos",
             "brand": "razer",
@@ -145,10 +140,9 @@
             "oldprice": 149.99,
             "images": [
                 "/products/6teclado.jpg",
-                "/products/",
-                "/products/",
-                "/products/",
-                "/products/"
+                "/products/6teclado2.jpg",
+                "/products/6teclado3.jpg",
+                "/products/6teclado4.jpg"
             ],
             "category": "perifericos",
             "brand": "gamdias",
@@ -164,10 +158,9 @@
             "oldprice": 0,
             "images": [
                 "/products/7placa.jpg",
-                "/products/",
-                "/products/",
-                "/products/",
-                "/products/"
+                "/products/7placa2.jpg",
+                "/products/7placa3.jpg",
+                "/products/7placa4.jpg"
             ],
             "category": "hardware",
             "brand": "msi",
@@ -183,10 +176,9 @@
             "oldprice": 0,
             "images": [
                 "/products/8ryzen.jpg",
-                "/products/",
-                "/products/",
-                "/products/",
-                "/products/"
+                "/products/8ryzen2.jpg",
+                "/products/8ryzen3.jpg",
+                "/products/8ryzen4.jpg"
             ],
             "category": "hardware",
             "brand": "amd",
@@ -202,10 +194,9 @@
             "oldprice": 0,
             "images": [
                 "/products/9nitro5.jpg",
-                "/products/",
-                "/products/",
-                "/products/",
-                "/products/"
+                "/products/9nitro52.jpg",
+                "/products/9nitro53.jpg",
+                "/products/9nitro54.jpg"
             ],
             "category": "notebooks",
             "brand": "acer",
@@ -220,13 +211,12 @@
             "price": 799.90,
             "oldprice": 1099.90,
             "images": [
-                "/products/10cadeira.webp",
-                "/products/",
-                "/products/",
-                "/products/",
-                "/products/"
+                "/products/10cadeira.jpg",
+                "/products/10cadeira2.jpg",
+                "/products/10cadeira3.jpg",
+                "/products/10cadeira4.jpg"
             ],
-            "category": "cadeiras",
+            "category": "cadeiras gamer",
             "brand": "superframe",
             "rating": 4,
             "stock": 40,
@@ -239,11 +229,10 @@
             "price": 899.99,
             "oldprice": 1119.90,
             "images": [
-                "/products/10monitor.jpg",
-                "/products/",
-                "/products/",
-                "/products/",
-                "/products/"
+                "/products/11monitor.jpg",
+                "/products/11monitor2.jpg",
+                "/products/11monitor3.jpg",
+                "/products/11monitor4.jpg"
             ],
             "category": "monitores",
             "brand": "lg",
@@ -258,17 +247,358 @@
             "price": 299.99,
             "oldprice": 199.99,
             "images": [
-                "/products/11headset.jpg",
-                "/products/",
-                "/products/",
-                "/products/",
-                "/products/"
+                "/products/12headset.jpg",
+                "/products/12headset2.jpg",
+                "/products/12headset3.jpg",
+                "/products/12headset4.jpg"
             ],
             "category": "perifericos",
             "brand": "havit",
             "rating": 5,
             "stock": 40,
             "sold": 8
+        },
+        {
+            "id": 12,
+            "title": "Monitor Gamer AOC Hero 23.8 Full HD",
+            "description": "Monitor Gamer AOC Hero 23.8 Full HD, Wide, 144 Hz, 1ms, FreeSync, HDMI e DisplayPort, IPS, Ajuste de Altura - 24G2/BK!",
+            "price": 1261.99,
+            "oldprice": 1399.99,
+            "images": [
+                "/products/13monitor.jpg",
+                "/products/13monitor2.jpg",
+                "/products/13monitor3.jpg",
+                "/products/13monitor4.jpg"
+            ],
+            "category": "monitores",
+            "brand": "aoc",
+            "rating": 5,
+            "stock": 25,
+            "sold": 16
+        },
+        {
+            "id": 13,
+            "title": "Monitor Gamer Husky Blizzard 27' LED Full HD",
+            "description": "Monitor Gamer Husky Gaming Blizzard LED 27 Widescreen Curvo chegou para trazer mais vivacidade e experiência de imersão para seus jogos! Com os recursos AdaptiveSync, Overdrive e Tela VA, o monitor Husky Gaming Blizzard garante um ótimo desempenho e um rápido tempo de resposta.",
+            "price": 1699.99,
+            "oldprice": 1999.99,
+            "images": [
+                "/products/14monitor.jpg",
+                "/products/14monitor2.jpg",
+                "/products/14monitor3.jpg",
+                "/products/14monitor4.jpg"
+            ],
+            "category": "monitores",
+            "brand": "husky",
+            "rating": 4,
+            "stock": 30,
+            "sold": 4
+        },
+        {
+            "id": 14,
+            "title": "Gabinete Gamer Rise Mode Glass 06X",
+            "description": "Os Gabinetes são a estrutura que une toda sua build, onde você vai querer algo que tenha flexibilidade para montagem da suas peças, garanta boa refrigeração dos componentes e que deixe tudo bonito. O Gabinete Rise Mode Glass 06X é a melhor escolha para tudo isso. Com acabamento externo em Vidro, dand um toque de estilo ao seu setup. Além de possuir espaço para 6 Fans (que não acompanham o gabinete).",
+            "price": 309.99,
+            "oldprice": 0,
+            "images": [
+                "/products/15gabinete.jpg",
+                "/products/15gabinete2.jpg",
+                "/products/15gabinete3.jpg",
+                "/products/15gabinete4.jpg"
+            ],
+            "category": "gabinetes",
+            "brand": "rise mode",
+            "rating": 4,
+            "stock": 20,
+            "sold": 7
+        },
+        {
+            "id": 15,
+            "title": "Gabinete Gamer Rise Mode Galaxy Glass",
+            "description": "O Gabinete Gamer Rise Mode Galaxy Glass Preto possui design futurista e gamer. Com Lateral e Fronte em Vidro Temperado, tenha maior visibiliade e acesso de todos seus componentes para um visual dinâmico.",
+            "price": 749.99,
+            "oldprice": 849.90,
+            "images": [
+                "/products/16gabinete.jpg",
+                "/products/16gabinete2.jpg",
+                "/products/16gabinete3.jpg",
+                "/products/16gabinete4.jpg"
+            ],
+            "category": "gabinetes",
+            "brand": "rise mode",
+            "rating": 5,
+            "stock": 16,
+            "sold": 4
+        },
+        {
+            "id": 16,
+            "title": "Gabinete Gamer NOX Infinity Alpha",
+            "description": "Gabinete Gamer NOX Infinity Alpha, ARGB Rainbow, Lateral em Vidro, 1x Cooler, Preto - NXINFINTYALPHA.",
+            "price": 379.99,
+            "oldprice": 0,
+            "images": [
+                "/products/17gabinete.jpg",
+                "/products/17gabinete2.jpg",
+                "/products/17gabinete3.jpg",
+                "/products/17gabinete4.jpg"
+            ],
+            "category": "gabinetes",
+            "brand": "nox",
+            "rating": 5,
+            "stock": 12,
+            "sold": 3
+        },
+        {
+            "id": 17,
+            "title": "Cadeira Gamer Mx5",
+            "description": "A nova linha de Cadeira Gamer Mymax, são as mais iradas do mercado, a MX5 possui design ergonômico e revestimento em Tecido sintético PU. Projetada para proporcionar conforto mesmo após horas jogando. Esse conforto foi obtido através do uso de espuma injetada de alta densidade no encosto e assento, aliado a possibilidade de inclinar o encosto em até 180° e da função balanço.",
+            "price": 799.00,
+            "oldprice": 0,
+            "images": [
+                "/products/18cadeira.jpg",
+                "/products/18cadeira2.jpg",
+                "/products/18cadeira3.jpg",
+                "/products/18cadeira4.jpg"
+            ],
+            "category": "cadeiras gamer",
+            "brand": "mymax",
+            "rating": 0,
+            "stock": 15,
+            "sold": 0
+        },
+        {
+            "id": 18,
+            "title": "Cadeira De Escritório, Prizi Diamante - Preta",
+            "description": "A cadeira de escritório Diamante possui uma atmosfera moderna e é a escolha mais adequada para quem busca qualidade e conforto. O encosto e o assento da cadeira são preenchidos com espuma de alta densidade, o que proporciona boa postura e melhora o desempenho na vida cotidiana.",
+            "price": 179.90,
+            "oldprice": 259.90,
+            "images": [
+                "/products/19cadeira.jpg",
+                "/products/19cadeira2.jpg",
+                "/products/19cadeira3.jpg",
+                "/products/19cadeira4.jpg"
+            ],
+            "category": "cadeiras gamer",
+            "brand": "prizi",
+            "rating": 0,
+            "stock": 20,
+            "sold": 0
+        },
+        {
+            "id": 19,
+            "title": "Notebook Gamer Lenovo Gaming 3i",
+            "description": "Novo design com 11ª Geração de Processadores Intel Core i5-11300H e placa de vídeo NVIDIA GeForce GTX 1650 4GB. Ideal para gamers e usuários que também precisam de alta performance. Com tela de 15.6'' Full HD WVA Antirreflexo para melhor definição de imagem e cores. O armanezamento SSD PCIe NVMe é 10x mais rápido* que um HDD 2.5” SATA, você terá mais segurança ao armazenar seus dados. O teclado retroiluminado em LED branco, deixa o computador mais atraente e também favorece a performance para jogos em lugares com pouca iluminação. Silencioso e não esquenta: projetado com um sistema de resfriamento otimizado composto por 2 coolers e 4 saídas de ar para suportar o alto desempenho do notebook. Sua privacidade pessoal é muito importante. É por isso que o Ideapad Gaming 3i está equipado com prática porta de privacidade da webcam. Quando não estiver em uma chamada de vídeo ou gravando algo, basta deslizá-la. Nitidez e alta qualidade de som com Nahimic Audio. Possui tecnologia de carregamento rápido: quinze minutos de carregamento garante até duas horas de uso**. A Lenovo coloca o Ideapad Gaming 3i à prova em testes de resistência altamente estressantes como: altas e baixas temperaturas, choque de temperatura, quebra e vibração, certificando a preocupação com a segurança e qualidade. Por meio de testes militares, mantém a convicção da melhor escolha sempre.  A distância entre a tecla e o botão ficou menor: apenas 1.5mm. Tenha mais agilidade, rapidez e tempo de resposta. A função Smart Control permite que o usuário da Lenovo mude a engrenagem simplesmente pressionando as teclas Fn + Q. Mude do Modo Performance para maior FPS, altere do Modo Silencioso para melhor duração da bateria, ou use o Modo Balanceado para uso diário. Armazenamento híbrido: Possui 2 slots SSD M.2 e 1 slot HDD SATA.",
+            "price": 4490.90,
+            "oldprice": 4890.90,
+            "images": [
+                "/products/20notebook.jpg",
+                "/products/20notebook2.jpg",
+                "/products/20notebook3.jpg",
+                "/products/20notebook4.jpg"
+            ],
+            "category": "notebooks",
+            "brand": "lenovo",
+            "rating": 5,
+            "stock": 28,
+            "sold": 2
+        },
+        {
+            "id": 20,
+            "title": "Notebook Dell Gamer G15",
+            "description": "Notebook Dell Gamer G15 - Intel I5, 8GB RAM, SSD 256GB, RTX 3050, 15,6 Polegada Full HD, Linux.",
+            "price": 6990.99,
+            "oldprice": 0,
+            "images": [
+                "/products/21notebook.jpg",
+                "/products/21notebook2.jpg",
+                "/products/21notebook3.jpg",
+                "/products/21notebook4.jpg"
+            ],
+            "category": "notebooks",
+            "brand": "dell",
+            "rating": 5,
+            "stock": 25,
+            "sold": 5
+        },
+        {
+            "id": 21,
+            "title": "Headset Gamer HyperX Cloud Stinger",
+            "description": "Cloud Stinger - Fone de ouvido confortável e leve totalmente ideal para jogos, estrutura rotacional de 90 graus traz conforto e durabilidade da assinatura HyperX, microfone com cancelamento de ruído giratório para mudo e com total compatibilidade multiplataformas.",
+            "price": 249.99,
+            "oldprice": 0,
+            "images": [
+                "/products/22headset.jpg",
+                "/products/22headset2.jpg",
+                "/products/22headset3.jpg",
+                "/products/22headset4.jpg"
+            ],
+            "category": "perifericos",
+            "brand": "hyperx",
+            "rating": 5,
+            "stock": 14,
+            "sold": 26
+        },
+        {
+            "id": 22,
+            "title": "Headset Gamer Razer Kraken X Lite",
+            "description": "Equipado com software de som surround 7.1, para que você possa aproveitar a exatidão do áudio posicional ao jogar: você será capaz de perceber a direção de onde a ação está vindo, para estar pronto para se posicionar no tiroteio. Com drivers de 40 mm com afinação personalizada, o Razer Kraken X Lite produz um som claro e balanceado, das explosões mais estrondosas em intensas batalhas aos passos mais sutis em missões secretas e sorrateiras. *Disponível apenas no Windows 10 de 64 bits.",
+            "price": 289.90,
+            "oldprice": 0,
+            "images": [
+                "/products/23headset.jpg",
+                "/products/23headset2.jpg",
+                "/products/23headset3.jpg",
+                "/products/23headset4.jpg"
+            ],
+            "category": "perifericos",
+            "brand": "razer",
+            "rating": 4,
+            "stock": 8,
+            "sold": 6
+        },
+        {
+            "id": 23,
+            "title": "Mouse Gamer Redragon Cobra",
+            "description": "Mouse Gamer Redragon Cobra, RGB, 12400DPI, 8 Botões, Branco e Vermelho.",
+            "price": 89.99,
+            "oldprice": 0,
+            "images": [
+                "/products/24mouse.jpg",
+                "/products/24mouse2.jpg",
+                "/products/24mouse3.jpg",
+                "/products/24mouse4.jpg"
+            ],
+            "category": "perifericos",
+            "brand": "redragon",
+            "rating": 0,
+            "stock": 13,
+            "sold": 2
+        },
+        {
+            "id": 24,
+            "title": "Roteador Asus Dual Band 6000Mbps",
+            "description": "Roteador Asus Dual Band, 6000Mbps, 4 Antenas, Preto - RT-AX88U. O número crescente de dispositivos pessoais e IoT conectados levou a um aumento geral na densidade de rede que está ultrapassando os limites do padrão WiFi atual. O WiFi 6 mais recente (802.11ax) oferece tecnologias preparadas para o futuro, maior eficiência de rede, velocidades de Wi-Fi mais rápidas, maior cobertura e maior duração da bateria para dispositivos conectados, proporcionando uma experiência de rede significativamente melhor.",
+            "price": 1890.99,
+            "oldprice": 0,
+            "images": [
+                "/products/25roteador.jpg",
+                "/products/25roteador2.jpg",
+                "/products/25roteador3.jpg",
+                "/products/25roteador4.jpg"
+            ],
+            "category": "rede e internet",
+            "brand": "asus",
+            "rating": 5,
+            "stock": 24,
+            "sold": 1
+        },
+        {
+            "id": 25,
+            "title": "Roteador Wireless TP-Link Archer C60",
+            "description": "O Archer C60 é um roteador TP-Link com 5 antenas externas que oferecerem ótima cobertura e velocidade wireless N de até 867mbps, ideal para uso doméstico exigente como jogos online, streaming de vídeos de HD, entre outros. Tudo com uma fácil configuração e total controle do administrador.",
+            "price": 195.60,
+            "oldprice": 0,
+            "images": [
+                "/products/26roteador.jpg",
+                "/products/26roteador2.jpg",
+                "/products/26roteador3.jpg",
+                "/products/26roteador4.jpg"
+            ],
+            "category": "rede e internet",
+            "brand": "tp-link",
+            "rating": 4,
+            "stock": 24,
+            "sold": 1
+        },
+        {
+            "id": 26,
+            "title": "Patch Cord UTP Cat6, Padrão 568b 1.5M",
+            "description": "Cabo 26 AWG montado com conectores RJ45.",
+            "price": 4.85,
+            "oldprice": 0,
+            "images": [
+                "/products/27cabo.jpg",
+                "/products/27cabo2.jpg",
+                "/products/27cabo3.jpg",
+                "/products/27cabo4.jpg"
+            ],
+            "category": "rede e internet",
+            "brand": "outros",
+            "rating": 0,
+            "stock": 25,
+            "sold": 0
+        },
+        {
+            "id": 27,
+            "title": "Cabo de Transmissão de Dados Furukawa SohoPlus",
+            "description": "Cabo de Transmissão de Dados Furukawa SohoPlus, U/UTP CAT.5e, 24AWGX4P, CMX, Cinza - 23200102. Principal elemento de uma rede, determina a velocidade em que os dados irão trafegar. Sua correta instalação é importante para garantir a qualidade do sinal. Cabo U/UTP CAT.5E 100% cobre, 24AWGX4P, CMX, para uso em redes de alta velocidade. Entregue em Caixa Fastbox com 305 metros.",
+            "price": 699.99,
+            "oldprice": 749.90,
+            "images": [
+                "/products/28cabo.jpg",
+                "/products/28cabo2.jpg",
+                "/products/28cabo3.jpg",
+                "/products/28cabo4.jpg"
+            ],
+            "category": "rede e internet",
+            "brand": "furukawa",
+            "rating": 5,
+            "stock": 19,
+            "sold": 1
+        },
+        {
+            "id": 28,
+            "title": "Console Nintendo Switch Oled com Joy-Con",
+            "description": "Console Nintendo Switch Oled com Joy-Con, Branco - HBGSKAAA2.",
+            "price": 2899.99,
+            "oldprice": 0,
+            "images": [
+                "/products/29switch.jpg",
+                "/products/29switch2.jpg",
+                "/products/29switch3.jpg",
+                "/products/29switch4.jpg"
+            ],
+            "category": "video games",
+            "brand": "nintendo",
+            "rating": 5,
+            "stock": 23,
+            "sold": 2
+        },
+        {
+            "id": 29,
+            "title": "Console Sony Playstation 5",
+            "description": "O PlayStation 5 é o console de nova geração que carrega todo o legado construído pela Sony ao longo de décadas de história no mundo dos games. Dentre suas inúmeras inovações, a principal delas é o carregamento através de SSDs (Solid State Drives), que permite minimizar o tempo de carregamento de todos os processos dentro do console, eliminando para sempre telas de loading e horas de instalação.",
+            "price": 4799.00,
+            "oldprice": 0,
+            "images": [
+                "/products/30playstation.jpg",
+                "/products/30playstation2.jpg",
+                "/products/30playstation3.jpg",
+                "/products/30playstation4.jpg"
+            ],
+            "category": "video games",
+            "brand": "sony",
+            "rating": 5,
+            "stock": 21,
+            "sold": 4
+        },
+        {
+            "id": 30,
+            "title": "Console Microsoft Xbox Series S",
+            "description": "Obtenha o Xbox Series S, nosso Xbox menor e totalmente digital, em uma versão especial limitada: pacote Fortnite, Rocket League e Fall Guys. Xbox Series S, o menor e mais elegante de todos os tempos. Com taxas de quadros mais altas, tempos de carregamento mais rápidos e mundos mais ricos e dinâmicos, o Xbox Series S oferece desempenho e velocidade de última geração em um formato compacto e totalmente digital. Retrocompatibilidade com milhares de jogos. Prepare-se para tempos de carregamento mais rápidos, resolução mais alta, taxas de quadros mais estáveis e melhor latência de entrada em milhares de jogos Xbox One, Xbox 360 e Xbox Original.",
+            "price": 2299.99,
+            "oldprice": 0,
+            "images": [
+                "/products/31xbox.jpg",
+                "/products/31xbox2.jpg",
+                "/products/31xbox3.jpg",
+                "/products/31xbox4.jpg"
+            ],
+            "category": "video games",
+            "brand": "microsoft",
+            "rating": 5,
+            "stock": 22,
+            "sold": 3
         }
     ]
 }

@@ -1,9 +1,11 @@
 import { ProductCard } from "../ProductCard"
 import { List, ProductListContainer, TitleList } from "./styles"
 import { Button } from "../Button"
+import { useState } from "react"
 
 const ProductList = ({title, text, showTitle=true, showBtn=true, products, orderBy='', showMaxItens}) => {
 
+  const [limit, setLimit] = useState(showMaxItens || 12)
   if(orderBy === 'bestSellers') {
     products = products.sort((a, b) => b.sold - a.sold)
   }
@@ -20,10 +22,10 @@ const ProductList = ({title, text, showTitle=true, showBtn=true, products, order
     products = products.sort((a, b) => a.id - b.id)
   }
 
-  if(showMaxItens > 0)
-  {
-    products = products.slice(0, showMaxItens)
-  }
+  const handleLoadMore = () => {
+    setLimit(limit + 6);
+    console.log('teste')
+  };
 
   return (
     <ProductListContainer>
@@ -34,9 +36,14 @@ const ProductList = ({title, text, showTitle=true, showBtn=true, products, order
         </TitleList>
         }
         <List>
-          {products.map((product) => <ProductCard key={product.id} id={product.id} rating={product.rating} image={product.images[0]} title={product.title} oldprice={product.oldprice} price={product.price}/>)}           
+          {products.slice(0, limit).map((product) => <ProductCard key={product.id} id={product.id} rating={product.rating} image={product.images[0]} title={product.title} oldprice={product.oldprice} price={product.price}/>)}           
         </List>
-        {showBtn && <Button text={text} outlined/>
+        {limit < products.length ?
+            <>
+              {showBtn && <Button text={text} outlined onClick={handleLoadMore} />}
+            </>
+          :
+            null
         }
     </ProductListContainer>
   )

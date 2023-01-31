@@ -9,8 +9,7 @@ import {
 import { IoClose } from "react-icons/io5"
 import { 
   MdShoppingCart,
-  MdAccountCircle,
-  MdOutlineFavorite
+  MdAccountCircle
 } from 'react-icons/md'
 import config from '/config.json'
 import { useEffect, useRef } from "react"
@@ -50,10 +49,6 @@ const MenuMobile = ({menuIsVisible, setMenuIsVisible}) => {
                 <p>0<span>+</span></p>
             </div>
             <p>Carrinho</p>
-          </MenuItem>
-          <MenuItem>
-            <MdOutlineFavorite size={24} />
-            <p>Favoritos</p>
           </MenuItem>
           <Divider />
           <Departments>

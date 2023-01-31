@@ -7,7 +7,6 @@ const CategoryList = () => {
     <CategoryListContainer>
         <TitleList>
             <p>Categorias 📁</p>
-            <a href="">Ver todas</a>
         </TitleList>
         <List>
           {config.departments.map((category) => <CategoryCard key={category.id} title={category.name} image={category.image} />)}        

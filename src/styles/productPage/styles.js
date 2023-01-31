@@ -9,7 +9,7 @@ export const ProductContainer = styled.section`
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
-    gap: 3rem;
+    gap: 2rem;
     margin-bottom: 1.75rem;
     @media (min-width: 768px) {
         flex-direction: row;
@@ -35,7 +35,7 @@ export const ProductImages = styled.div`
         color: ${({theme}) => theme.textColorBase};
     }
     @media (min-width: 768px) {
-        max-width: 45%;
+        max-width: 35%;
         .slick-dots li {
             width: 88px;
             height: 88px;
@@ -58,6 +58,9 @@ export const ProductInfo = styled.div`
     text-align: left;
     p{
         font-size: 0.875rem;
+    }
+    .description{
+        line-height: 1rem;
     }
     h1{
         font-size: 1.5rem;

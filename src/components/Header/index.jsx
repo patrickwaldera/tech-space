@@ -13,8 +13,7 @@ import Image from 'next/image'
 import { 
     MdOutlineSearch,
     MdShoppingCart,
-    MdAccountCircle,
-    MdOutlineFavorite
+    MdAccountCircle
 } from 'react-icons/md'
 import { IoList } from 'react-icons/io5'
 import { Dropdown } from './components/Dropdown'
@@ -57,9 +56,6 @@ const Header = () => {
                     <MenuItems>
                         <ChangeThemeBtn />
                         <DesktopItemsContainer>
-                            <DesktopItem>
-                                <MdOutlineFavorite size={24} />
-                            </DesktopItem>
                             <DesktopItem>
                                 <MdShoppingCart size={24} />
                                 <div className='cart-items'>

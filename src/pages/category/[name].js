@@ -39,7 +39,7 @@ const Category = () => {
                             <h1>{category}</h1>
                             </div>
                             {productsFiltered.length === 0 ? 
-                                <h2>Nehum produto encontrado!</h2>
+                                <NotFound text={'Nehum produto encontrado!'} />
                             :
                             <> 
                                 <div className="order-by">

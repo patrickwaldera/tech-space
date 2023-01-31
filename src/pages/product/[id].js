@@ -23,7 +23,7 @@ const Product = () => {
     customPaging: function(i) {
       return (
         <a>
-          <ProductImg src={product?.images[0]} fill sizes="100%" alt='' />
+          <ProductImg src={product?.images[i]} fill sizes="100%" alt='' />
         </a>
       );
     },
@@ -42,18 +42,18 @@ const Product = () => {
           <>
             
             <ProductImages>
-              <Slider className="carousel-product" {...settings}>
+              <Slider {...settings}>
                 <div>
                   <ProductImg src={product?.images[0]} fill sizes="100%" alt='' />
                 </div>
                 <div>
-                  <ProductImg src={product?.images[0]} fill sizes="100%" alt='' />
+                  <ProductImg src={product?.images[1]} fill sizes="100%" alt='' />
                 </div>
                 <div>
-                  <ProductImg src={product?.images[0]} fill sizes="100%" alt='' />
+                  <ProductImg src={product?.images[2]} fill sizes="100%" alt='' />
                 </div>
                 <div>
-                  <ProductImg src={product?.images[0]} fill sizes="100%" alt='' />
+                  <ProductImg src={product?.images[3]} fill sizes="100%" alt='' />
                 </div>
               </Slider>
             </ProductImages>
@@ -63,7 +63,7 @@ const Product = () => {
                 <p className="brand">Marca: {product?.brand.toUpperCase()}</p>
                 <StarRating ratingStars={product?.rating} />
               </div>
-              <p>{product?.description}</p>
+              <p className="description">{product?.description}</p>
               <div className="price">
                 {product?.oldprice !== 0 ? 
                         <p className='old-price'>de: <span>R$ {product?.oldprice.toLocaleString("pt-br", {style:"decimal", minimumFractionDigits: 2})}</span> por:</p>

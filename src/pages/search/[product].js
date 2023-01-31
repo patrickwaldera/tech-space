@@ -1,5 +1,6 @@
 import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
+import { NotFound } from "@/components/NotFound"
 import { ProductList } from "@/components/ProductList"
 import { ProductsListContext } from "@/context/ProductList"
 import { SearchPageContainer } from "@/styles/searchPage/styles"
@@ -27,7 +28,7 @@ const Search = () => {
                         <h1>Resultados da busca por: {`"${search}"`}</h1>
                     </div>
                     {productsFiltered.length === 0 ? 
-                        <h2>Nehum produto encontrado!</h2>
+                        <NotFound text={'Nehum produto encontrado!'} />
                         :
                         <>
                         <div className="order-by">

@@ -4,6 +4,7 @@ import theme from "../styles/theme";
 import ColorModeProvider, { ColorModeContext } from '@/context/ColorMode';
 import { useContext} from 'react';
 import ProductsListProvider from '@/context/ProductList';
+import Head from 'next/head';
 
 function ProviderWrapper({children}) {
   return (
@@ -17,12 +18,17 @@ function ProviderWrapper({children}) {
 function App({ Component, pageProps }) {
   const contexto = useContext(ColorModeContext);
   return (
-    <ThemeProvider theme={theme[contexto.mode]}>
-        <GlobalStyle />
-        <ProductsListProvider>
-          <Component {...pageProps} />
-        </ProductsListProvider>
-    </ThemeProvider>
+    <>
+      <Head>
+        <title>Tech Space</title>
+      </Head>
+      <ThemeProvider theme={theme[contexto.mode]}>
+          <GlobalStyle />
+          <ProductsListProvider>
+            <Component {...pageProps} />
+          </ProductsListProvider>
+      </ThemeProvider>
+    </>
   ) 
 }
 
