@@ -2,6 +2,7 @@ import { ProductCard } from "../ProductCard"
 import { List, ProductListContainer, TitleList } from "./styles"
 import { Button } from "../Button"
 import { useState } from "react"
+import Link from "next/link"
 
 const ProductList = ({title, text, showTitle=true, showBtn=true, products, orderBy='', showMaxItens}) => {
 
@@ -24,7 +25,6 @@ const ProductList = ({title, text, showTitle=true, showBtn=true, products, order
 
   const handleLoadMore = () => {
     setLimit(limit + 6);
-    console.log('teste')
   };
 
   return (
@@ -32,7 +32,7 @@ const ProductList = ({title, text, showTitle=true, showBtn=true, products, order
         {showTitle && 
         <TitleList>
             <p>{title}</p>
-            <a href="">{text}</a>
+            <Link href={{ pathname: '/products', query: { q: orderBy } }}>{text}</Link>
         </TitleList>
         }
         <List>
