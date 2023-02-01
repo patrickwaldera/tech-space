@@ -58,6 +58,7 @@ export const SearchBoxMobile = styled.div`
     background-color: ${({theme}) => theme.searchBox};
     margin: 0 auto;
     border-radius: 4px;
+    position: relative;
 
     &:focus-within {
         outline: 2px solid ${({theme}) => theme.secondary};
@@ -100,6 +101,7 @@ export const SearchBoxDesktop = styled.div`
     background-color: ${({theme}) => theme.searchBox};
     margin: 0 auto;
     border-radius: 4px;
+    position: relative;
 
     &:focus-within {
         outline: 2px solid ${({theme}) => theme.secondary};

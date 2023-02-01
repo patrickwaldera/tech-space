@@ -20,6 +20,14 @@ export const ProductImages = styled.div`
     display: block;
     margin: 0 auto;
     max-width: 100%;
+    .slick-list{
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    }
+    .slick-active {
+        border-radius: 4px;
+        outline-offset: 2px;
+        outline: 2px solid ${({theme}) => theme.primary};
+    }
     .slick-dots {
         position: static !important;
     }

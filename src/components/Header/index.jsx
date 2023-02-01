@@ -22,6 +22,7 @@ import { MenuMobile } from './components/MenuMobile'
 import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { Autocomplete } from './components/Autocomplete'
 
 const Header = () => {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
@@ -30,6 +31,10 @@ const Header = () => {
 
   const handleSearch = () => {
     router.push(`/search/${search.toLowerCase().normalize('NFD').replace(/\p{Mn}/gu, "")}`)
+  }
+
+  const clearSearch = () => {
+    setSearch('')
   }
 
   return (
@@ -49,7 +54,8 @@ const Header = () => {
                             <SearchBoxDesktop>
                                 <MdOutlineSearch className='searchIcon' size={32}/>
                                 <input type="text" placeholder='O que você procura? Digite aqui' value={search} onChange={(e) => setSearch(e.target.value)} onKeyDown={e => e.key === 'Enter' ? handleSearch() : ''}/>
-                            </SearchBoxDesktop>
+                                <Autocomplete inputSearch={search} clearSearch={clearSearch} />
+                            </SearchBoxDesktop>                            
                             <Dropdown />
                         </DesktopMenu>
                     </div>
@@ -74,6 +80,7 @@ const Header = () => {
                 <SearchBoxMobile>
                     <MdOutlineSearch className='searchIcon' size={20}/>
                     <input type="text" placeholder='O que você procura? Digite aqui' value={search} onChange={(e) => setSearch(e.target.value)} onKeyDown={e => e.key === 'Enter' ? handleSearch() : ''}/>
+                    <Autocomplete inputSearch={search}/>
                 </SearchBoxMobile>
             </div>
         </HeaderContainer>
