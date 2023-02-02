@@ -80,7 +80,7 @@ const Header = () => {
                 <SearchBoxMobile>
                     <MdOutlineSearch className='searchIcon' size={20}/>
                     <input type="text" placeholder='O que você procura? Digite aqui' value={search} onChange={(e) => setSearch(e.target.value)} onKeyDown={e => e.key === 'Enter' ? handleSearch() : ''}/>
-                    <Autocomplete inputSearch={search}/>
+                    <Autocomplete inputSearch={search} clearSearch={clearSearch} />
                 </SearchBoxMobile>
             </div>
         </HeaderContainer>
