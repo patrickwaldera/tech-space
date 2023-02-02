@@ -11,7 +11,7 @@ const Footer = () => {
         </a>
         <PaymentMethods>
             <p>FORMAS DE PAGAMENTO</p>
-            <Image src={paymentMethods} alt='Métodos de Pagamento' priority/>
+            <Image src={paymentMethods} alt='Métodos de Pagamento' loading="lazy"/>
         </PaymentMethods>
         <FooterLinks>
             <div className='footer-link'>

@@ -8,7 +8,7 @@ const ProductCard = ({id, rating, image, title, oldprice, price}) => {
   return (
     <CardContainer>
         <StarRating ratingStars={rating} />
-        <ProductImg  src={image} alt="" fill sizes="100%" onClick={() => router.push(`/product/${id}`)}/>
+        <ProductImg  src={image} alt="" fill sizes="100%" onClick={() => router.push(`/product/${id}`)} loading="lazy"/>
         <ProductTitle>
             <p>{title}</p>
         </ProductTitle>

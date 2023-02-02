@@ -23,7 +23,7 @@ const Product = () => {
     customPaging: function(i) {
       return (
         <a>
-          <ProductImg src={product?.images[i]} fill sizes="100%" alt='' />
+          <ProductImg src={product?.images[i]} fill sizes="100%" alt='' loading="lazy"/>
         </a>
       );
     },
@@ -44,16 +44,16 @@ const Product = () => {
             <ProductImages>
               <Slider {...settings}>
                 <div>
-                  <ProductImg src={product?.images[0]} fill sizes="100%" alt='' />
+                  <ProductImg src={product?.images[0]} fill sizes="100%" alt='' loading="lazy"/>
                 </div>
                 <div>
-                  <ProductImg src={product?.images[1]} fill sizes="100%" alt='' />
+                  <ProductImg src={product?.images[1]} fill sizes="100%" alt='' loading="lazy"/>
                 </div>
                 <div>
-                  <ProductImg src={product?.images[2]} fill sizes="100%" alt='' />
+                  <ProductImg src={product?.images[2]} fill sizes="100%" alt='' loading="lazy"/>
                 </div>
                 <div>
-                  <ProductImg src={product?.images[3]} fill sizes="100%" alt='' />
+                  <ProductImg src={product?.images[3]} fill sizes="100%" alt='' loading="lazy"/>
                 </div>
               </Slider>
             </ProductImages>

@@ -11,7 +11,7 @@ const CategoryCard = ({title , image}) => {
             </CategoryTitle>
         </Wrapper>
         <div className="image">
-            <CategoryImg src={image} alt="" fill sizes="(min-width: 600px) 150px, 100px" />         
+            <CategoryImg src={image} alt="" fill sizes="(min-width: 600px) 150px, 100px" loading="lazy"/>         
         </div>
     </CategoryContainer>
     
