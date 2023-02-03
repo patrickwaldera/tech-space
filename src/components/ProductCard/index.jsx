@@ -1,14 +1,20 @@
-import { BuyProduct, CardContainer, CustAndBuy, ProductImg, ProductPrice, ProductTitle, Stars } from './styles'
+import { BuyProduct, CardContainer, CustAndBuy, ProductImg, ProductPrice, ProductTitle, Skeleton } from './styles'
 import { StarRating } from '../StarRating'
 import { Button } from '../Button'
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 
 const ProductCard = ({id, rating, image, title, oldprice, price}) => {
   const router = useRouter();
+  const [isLoaded, setIsLoaded] = useState(false);
+
   return (
     <CardContainer>
         <StarRating ratingStars={rating} />
-        <ProductImg  src={image} alt="" fill sizes="100%" onClick={() => router.push(`/product/${id}`)} loading="lazy"/>
+        {!isLoaded && <Skeleton />}
+        <ProductImg onLoad={() => {
+            setIsLoaded(true)
+            }} src={image} alt="" fill sizes="100%" onClick={() => router.push(`/product/${id}`)} style={{ display: isLoaded ? 'block' : 'none' }} />
         <ProductTitle>
             <p>{title}</p>
         </ProductTitle>

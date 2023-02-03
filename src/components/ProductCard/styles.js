@@ -31,6 +31,13 @@ export const ProductImg = styled(Image)`
     cursor: pointer;
 `
 
+export const Skeleton = styled.div`
+    width: 100% !important;
+    height: 88px !important;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+`
+
 export const ProductTitle = styled.div`
     width: 100%;
     height: 50px;
