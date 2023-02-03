@@ -2,7 +2,6 @@ import { BuyProduct, CardContainer, CustAndBuy, ProductImg, ProductPrice, Produc
 import { StarRating } from '../StarRating'
 import { Button } from '../Button'
 import { useRouter } from 'next/router';
-import LazyLoad from 'react-lazyload';
 import { useState } from 'react';
 import { Loading } from '../Loading';
 
@@ -12,13 +11,10 @@ const ProductCard = ({id, rating, image, title, oldprice, price}) => {
   return (
     <CardContainer>
         <StarRating ratingStars={rating} />
-        {console.log(loading)}
         {loading && <Skeleton><Loading /></Skeleton>}
-        <LazyLoad height={88} once={true} >
             <ProductImg onLoadingComplete={() => {
                 setLoading(false)
-                }} src={image} alt="" fill sizes="100%" onClick={() => router.push(`/product/${id}`)} priority style={{display: loading ? 'none' : 'block'}} />
-        </LazyLoad>
+                }} src={image} alt="" fill sizes="100%" onClick={() => router.push(`/product/${id}`)} loading='eager' style={{display: loading ? 'none' : 'block'}} />
         <ProductTitle>
             <p>{title}</p>
         </ProductTitle>

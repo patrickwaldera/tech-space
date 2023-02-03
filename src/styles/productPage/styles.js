@@ -108,7 +108,7 @@ export const ProductInfo = styled.div`
         max-width: 100%;
     }
     @media (min-width: 768px) {
-        width: 45%;
+        width: 50%;
     }
 `
 
@@ -124,4 +124,14 @@ export const ProductImg = styled(Image)`
         
     }
     cursor: grab;
+`
+
+export const Skeleton = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    height: 300px !important;
+    background-color: ${({theme}) => theme.backgroundLevel1};
+    border-radius: 4px;
 `

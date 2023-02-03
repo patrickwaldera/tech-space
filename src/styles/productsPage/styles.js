@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProductsPageContainer = styled.section`
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 100%;
     min-height: 80vh;
     display: flex;
     flex-direction: column;

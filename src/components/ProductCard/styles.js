@@ -13,7 +13,8 @@ export const CardContainer = styled.div`
     padding-bottom: 1rem;
     position: relative !important;
     @media (min-width: 600px) {
-        max-width: 220px;    
+        max-width: 260px;  
+        max-width: 260px;    
     }
 `
 
@@ -43,7 +44,7 @@ export const Skeleton = styled.div`
 
 export const ProductTitle = styled.div`
     width: 100%;
-    height: 50px;
+    min-height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,7 +57,7 @@ export const ProductTitle = styled.div`
         }
     }
     @media (min-width: 600px) {
-        height: 80px;
+        min-height: 100px;
     }
 `
 export const CustAndBuy = styled.div`
@@ -64,6 +65,7 @@ export const CustAndBuy = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 `
 
 export const ProductPrice = styled.div`

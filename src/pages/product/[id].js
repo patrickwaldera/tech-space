@@ -1,6 +1,6 @@
 import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
-import { ProductImages, ProductInfo, ProductImg, ProductContainer } from "@/styles/productPage/styles"
+import { ProductImages, ProductInfo, ProductImg, ProductContainer, Skeleton } from "@/styles/productPage/styles"
 import { useRouter } from "next/router"
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
@@ -8,9 +8,10 @@ import 'slick-carousel/slick/slick-theme.css'
 import { StarRating } from "@/components/StarRating"
 import { Button } from "@/components/Button"
 import { ProductList } from "@/components/ProductList"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { ProductsListContext } from "@/context/ProductList"
 import { NotFound } from "@/components/NotFound"
+import { Loading } from "@/components/Loading"
 
 const Product = () => {
   const router = useRouter()
@@ -18,6 +19,7 @@ const Product = () => {
 
   const { products } = useContext(ProductsListContext);
   const product = products.find(product => product.id == productID);
+  const [ loading, setLoading] = useState(true)
   
   const settings = {
     customPaging: function(i) {
@@ -40,21 +42,14 @@ const Product = () => {
         <ProductContainer>
         {product ? 
           <>
-            
             <ProductImages>
               <Slider {...settings}>
-                <div>
-                  <ProductImg src={product?.images[0]} fill sizes="100%" alt='' loading="lazy"/>
+                {product.images.map((image) => 
+                <div key={image}>
+                  {loading && <Skeleton><Loading /></Skeleton>}
+                  <ProductImg src={image} fill sizes="100%" alt='' loading="eager" onLoadingComplete={() => {setLoading(false)}} style={{display: loading ? 'none' : 'block'}}/>
                 </div>
-                <div>
-                  <ProductImg src={product?.images[1]} fill sizes="100%" alt='' loading="lazy"/>
-                </div>
-                <div>
-                  <ProductImg src={product?.images[2]} fill sizes="100%" alt='' loading="lazy"/>
-                </div>
-                <div>
-                  <ProductImg src={product?.images[3]} fill sizes="100%" alt='' loading="lazy"/>
-                </div>
+                )}
               </Slider>
             </ProductImages>
             <ProductInfo>
