@@ -29,7 +29,6 @@ export const ProductImg = styled(Image)`
         height: 108px !important; 
     }
     cursor: pointer;
-    display: ${({loadingStatus}) => loadingStatus ? 'none' : 'block'}
 `
 
 export const Skeleton = styled.div`

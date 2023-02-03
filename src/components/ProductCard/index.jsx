@@ -16,7 +16,7 @@ const ProductCard = ({id, rating, image, title, oldprice, price}) => {
         <LazyLoad height={88} once={true} >
             <ProductImg onLoadingComplete={() => {
                 setLoading(false)
-                }} src={image} alt="" fill sizes="100%" onClick={() => router.push(`/product/${id}`)} loadingStatus={loading} />
+                }} src={image} alt="" fill sizes="100%" onClick={() => router.push(`/product/${id}`)} priority style={{display: loading ? 'none' : 'block'}} />
         </LazyLoad>
         <ProductTitle>
             <p>{title}</p>
