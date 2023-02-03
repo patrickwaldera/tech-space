@@ -4,6 +4,7 @@ import { Button } from '../Button'
 import { useRouter } from 'next/router';
 import LazyLoad from 'react-lazyload';
 import { useState } from 'react';
+import { Loading } from '../Loading';
 
 const ProductCard = ({id, rating, image, title, oldprice, price}) => {
   const router = useRouter();
@@ -12,7 +13,7 @@ const ProductCard = ({id, rating, image, title, oldprice, price}) => {
     <CardContainer>
         <StarRating ratingStars={rating} />
         {console.log(loading)}
-        {loading && <Skeleton />}
+        {loading && <Skeleton><Loading /></Skeleton>}
         <LazyLoad height={88} once={true} >
             <ProductImg onLoadingComplete={() => {
                 setLoading(false)

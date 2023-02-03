@@ -1,18 +1,12 @@
 import styled from "styled-components";
 
-export const LoadingContainer = styled.div`
+export const Spinner = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    .spinner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 40px;
-        height: 40px;
-        position: relative;
-    }
+    width: 40px;
+    height: 40px;
+    position: relative;
 
     .cube1, .cube2 {
         background-color: ${({theme}) => theme.secondary};

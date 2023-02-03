@@ -1,13 +1,11 @@
-import { LoadingContainer } from "./styles"
+import { Spinner } from "./styles"
 
 const Loading = () => {
   return (
-    <LoadingContainer>
-        <div className="spinner">
-            <div className="cube1"></div>
-            <div className="cube2"></div>
-        </div>
-    </LoadingContainer>
+    <Spinner>
+        <div className="cube1"></div>
+        <div className="cube2"></div>
+    </Spinner>
   )
 }
 

@@ -1,4 +1,4 @@
-import { Loading } from "@/components/Loading";
+import { LoadingScreen } from "@/components/LoadingScreen";
 import { createContext, useEffect, useState } from "react"
 
 export const ProductsListContext = createContext();
@@ -21,7 +21,7 @@ export default function ProductsListProvider({children}) {
   }, []);
 
   if (!data) {
-    return <Loading />;
+    return <LoadingScreen />;
   }
 
   return (

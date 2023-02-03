@@ -32,9 +32,12 @@ export const ProductImg = styled(Image)`
 `
 
 export const Skeleton = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100% !important;
     height: 88px !important;
-    background-color: #e0e0e0;
+    background-color: ${({theme}) => theme.backgroundLevel1};
     border-radius: 4px;
 `
 

@@ -1,10 +1,9 @@
-import { Loading } from '@/components/Loading';
-import { useState, useEffect } from 'react';
+import { LoadingScreen } from '@/components/LoadingScreen';
 
 const Teste = () => {
     return (
       <>
-        <Loading />
+        <LoadingScreen />
       </>
     );
 }
