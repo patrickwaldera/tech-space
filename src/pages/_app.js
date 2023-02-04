@@ -5,6 +5,7 @@ import ColorModeProvider, { ColorModeContext } from '@/context/ColorMode';
 import { useContext} from 'react';
 import ProductsListProvider from '@/context/ProductList';
 import Head from 'next/head';
+import favicon from '../../public/static/favicon.ico';
 
 function ProviderWrapper({children}) {
   return (
@@ -20,6 +21,7 @@ function App({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <link rel="icon" href={favicon.src} type="image/x-icon"/>
         <title>Tech Space</title>
       </Head>
       <ThemeProvider theme={theme[contexto.mode]}>
