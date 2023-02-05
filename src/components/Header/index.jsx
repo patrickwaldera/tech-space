@@ -62,14 +62,14 @@ const Header = () => {
                     <MenuItems>
                         <ChangeThemeBtn />
                         <DesktopItemsContainer>
-                            <DesktopItem>
+                            <DesktopItem onClick={() => router.push(`/cart`)}>
                                 <MdShoppingCart size={24} />
                                 <div className='cart-items'>
                                     <p>0<span>+</span></p>
                                 </div>
                                 <p>Carrinho</p>
                             </DesktopItem>
-                            <DesktopItem>
+                            <DesktopItem onClick={() => router.push(`/account`)}>
                                 <MdAccountCircle size={24} />
                                 <p>Minha Conta</p>
                             </DesktopItem>

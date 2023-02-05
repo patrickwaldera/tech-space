@@ -13,10 +13,12 @@ import {
 } from 'react-icons/md'
 import config from '/config.json'
 import { useEffect, useRef } from "react"
+import { useRouter } from "next/router"
 
 const MenuMobile = ({menuIsVisible, setMenuIsVisible}) => {
 
   const mobileRef = useRef(null);
+  const router = useRouter();
   
   useEffect(() => {
     document.body.style.overflowY = menuIsVisible ? 'hidden' : 'auto';
@@ -39,11 +41,11 @@ const MenuMobile = ({menuIsVisible, setMenuIsVisible}) => {
       <Wrapper ref={mobileRef}>
         <IoClose id="close" size={36} onClick={() => setMenuIsVisible(false)}/>
         <MenuItemsContainer>
-          <MenuItem>
+          <MenuItem onClick={() => router.push(`/account`)}>
             <MdAccountCircle size={24} />
             <p>Minha Conta</p>
           </MenuItem>
-          <MenuItem>
+          <MenuItem onClick={() => router.push(`/cart`)}>
             <MdShoppingCart size={24} />
             <div className='cart-items'>
                 <p>0<span>+</span></p>
