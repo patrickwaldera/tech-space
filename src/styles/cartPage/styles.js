@@ -108,6 +108,14 @@ export const CartContainer = styled.section`
 
     }
 
+    .empty-cart{
+        h1{
+            margin: 6rem 0;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    }
+
     @media (min-width: 992px) {
         .summary{
             align-self: flex-end;

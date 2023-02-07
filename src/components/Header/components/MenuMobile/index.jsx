@@ -12,13 +12,15 @@ import {
   MdAccountCircle
 } from 'react-icons/md'
 import config from '/config.json'
-import { useEffect, useRef } from "react"
+import { useContext, useEffect, useRef } from "react"
 import { useRouter } from "next/router"
+import { CartContext } from "@/context/CartProducts"
 
 const MenuMobile = ({menuIsVisible, setMenuIsVisible}) => {
 
   const mobileRef = useRef(null);
   const router = useRouter();
+  const { productsList } = useContext(CartContext)
   
   useEffect(() => {
     document.body.style.overflowY = menuIsVisible ? 'hidden' : 'auto';
@@ -48,7 +50,7 @@ const MenuMobile = ({menuIsVisible, setMenuIsVisible}) => {
           <MenuItem onClick={() => router.push(`/cart`)}>
             <MdShoppingCart size={24} />
             <div className='cart-items'>
-                <p>0<span>+</span></p>
+              {productsList.length < 10 ? <p>{productsList.length}</p> : <p>9<span>+</span></p>}
             </div>
             <p>Carrinho</p>
           </MenuItem>

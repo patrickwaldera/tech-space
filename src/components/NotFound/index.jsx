@@ -10,6 +10,7 @@ const NotFound = ({text}) => {
   const { products } = useContext(ProductsListContext);
   return (
     <>
+        {text && 
         <NotFoundContainer>
             <div className="not-found-info">
                 <h1>404</h1>
@@ -22,6 +23,7 @@ const NotFound = ({text}) => {
                 <AstronautImage src={astronaut} alt="" fill sizes="100%" loading="lazy" />
             </div>
         </NotFoundContainer>
+        }
         <ProductList title={'Mais produtos 🚀 '} text={'Ver mais'} products={products}/>
     </>
   )

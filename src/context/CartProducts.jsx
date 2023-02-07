@@ -3,11 +3,14 @@ import { createContext, useEffect, useState } from "react";
 export const CartContext = createContext();
 
 export default function CartProvider({children}) {
-    const [ productsList, setProductsList ] = useState([])
+    const [ productsList, setProductsList ] = useState('')
 
     useEffect(() => {
-        const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
-        setProductsList(savedCart);
+        const savedCart = JSON.parse(localStorage.getItem('cart'));
+        console.log(savedCart)
+        if(savedCart) {
+            setProductsList(savedCart);
+        }
       }, []);
 
     const addProduct = (productId) => {
@@ -23,7 +26,6 @@ export default function CartProvider({children}) {
         }
 
         setProductsList(copyProductsList);
-        console.log(copyProductsList)
     };
     
     const removeProduct = (productId) => {
@@ -41,18 +43,6 @@ export default function CartProvider({children}) {
         }
     };
 
-    const updateQuantity = (productId, quantity) => {
-
-        const copyProductsList = [...productsList]
-
-        const item = copyProductsList.find((product) => product.id === productId)
-
-        if(item.quantity > 1) {
-            item.quantity = quantity;
-            setProductsList(copyProductsList);
-        }        
-    };
-
     const clearCart = () => {
         setProductsList([])
     }
@@ -62,7 +52,7 @@ export default function CartProvider({children}) {
       }, [productsList]);
 
     return (
-        <CartContext.Provider value={{ productsList, addProduct, removeProduct, clearCart, updateQuantity }}>
+        <CartContext.Provider value={{ productsList, addProduct, removeProduct, clearCart }}>
             {children}
         </CartContext.Provider>
     )

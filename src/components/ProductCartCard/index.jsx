@@ -7,7 +7,7 @@ import { ProductCartContainer, ProductImg, Skeleton } from "./styles"
 const ProductCartCard = ({product, quantity}) => {
   const router = useRouter()
   const [ loading, setLoading] = useState(true)
-  const { addProduct, removeProduct, updateQuantity} = useContext(CartContext)
+  const { addProduct, removeProduct} = useContext(CartContext)
 
   return (
     <ProductCartContainer>

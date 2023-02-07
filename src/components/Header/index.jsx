@@ -19,14 +19,16 @@ import { IoList } from 'react-icons/io5'
 import { Dropdown } from './components/Dropdown'
 import { ChangeThemeBtn } from './components/ChangeThemeBtn'
 import { MenuMobile } from './components/MenuMobile'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Autocomplete } from './components/Autocomplete'
+import { CartContext } from '@/context/CartProducts'
 
 const Header = () => {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
   const [search, setSearch] = useState('');
+  const { productsList } = useContext(CartContext)
   const router = useRouter();
 
   const handleSearch = () => {
@@ -65,7 +67,7 @@ const Header = () => {
                             <DesktopItem onClick={() => router.push(`/cart`)}>
                                 <MdShoppingCart size={24} />
                                 <div className='cart-items'>
-                                    <p>0<span>+</span></p>
+                                    {productsList.length < 10 ? <p>{productsList.length}</p> : <p>9<span>+</span></p>}                 
                                 </div>
                                 <p>Carrinho</p>
                             </DesktopItem>
