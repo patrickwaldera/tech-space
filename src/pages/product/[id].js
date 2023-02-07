@@ -22,6 +22,7 @@ const Product = () => {
   const { addProduct } = useContext(CartContext)
   const product = products.find(product => product.id == productID);
   const [ loading, setLoading] = useState(true)
+  const [showMessage, setShowMessage] = useState(false);
   
   const settings = {
     customPaging: function(i) {
@@ -73,7 +74,17 @@ const Product = () => {
                     </div>
               </div>
               <div className="btn">
-                    <Button text={'ADICIONAR AO CARRINHO'} size={'1rem'} width={'100%'} outlined onClick={() => addProduct(product.id)}/>
+                    <Button text={'ADICIONAR AO CARRINHO'} size={'1rem'} width={'100%'} outlined onClick={() => {
+                      addProduct(product.id)
+                      setShowMessage(true);
+                      setTimeout(() => setShowMessage(false), 2000);
+                    }
+                   }/>
+                   {showMessage && (
+                    <div className={`add-message ${showMessage ? 'show' : ''}`}>
+                      <p>Item adicionado ao carrinho!</p>
+                    </div>
+                   )}
                     <Button text={'COMPRAR'} size={'1rem'} width={'100%'}/>
               </div>
             </ProductInfo>

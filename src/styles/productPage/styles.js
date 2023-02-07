@@ -107,6 +107,23 @@ export const ProductInfo = styled.div`
         flex-wrap: wrap;
         max-width: 100%;
     }
+    .add-message{
+        position: fixed;
+        left: 2rem;
+        bottom: 2rem;
+        padding: 1rem;
+        background-color: #1B98E0;
+        color: #ffffff;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        z-index: 2;
+        opacity: 0;
+        transition: opacity 3s;
+    }
+    .show {
+        opacity: 1;
+    }
+
     @media (min-width: 768px) {
         width: 50%;
     }
