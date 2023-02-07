@@ -1,24 +1,30 @@
-import { useState } from "react"
+import { CartContext } from "@/context/CartProducts"
+import { useRouter } from "next/router"
+import { useContext, useState } from "react"
 import { Button } from "../Button"
 import { ProductCartContainer, ProductImg, Skeleton } from "./styles"
 
-const ProductCartCard = () => {
+const ProductCartCard = ({product, quantity}) => {
+  const router = useRouter()
   const [ loading, setLoading] = useState(true)
+  const { addProduct, removeProduct, updateQuantity} = useContext(CartContext)
 
   return (
     <ProductCartContainer>
         <div className="left-wrapper">
             {loading && <Skeleton />}
-            <ProductImg onLoadingComplete={() => { setLoading(false) }} src={''} alt="" fill sizes="100%" onClick={() => router.push(`/product/${id}`)} loading='eager' style={{display: loading ? 'none' : 'block'}} />
-            <p>- 1 +</p>
+            <ProductImg onLoadingComplete={() => { setLoading(false) }} src={product.images[0]} alt="" fill sizes="100%" onClick={() => router.push(`/product/${product.id}`)} loading='eager' style={{display: loading ? 'none' : 'block'}} />
         </div>
        <div className="rigth-wrapper">
             <p>
-                Monitor Gamer LG 26 IPS, Ultra Wide, 75Hz, Full HD, 1ms, FreeSync Premium, HDR 10, 99% sRGB, HDMI, VESA - 26WQ500
+                {product.title}
             </p>
             <div className="product-info">
-                <p>1 x R$ 229,99</p>
-                <Button text={'Remover'} outlined/>
+                <p>{quantity} x R$ {product.price.toLocaleString("pt-br", {style:"decimal", minimumFractionDigits: 2})}</p>
+                <div>
+                  <p className="quantity-btn"><Button text={'-'} onClick={() => removeProduct(product.id)}/>{quantity}<Button text={'+'} onClick={() => addProduct(product.id)}/></p>
+                  <Button text={'Remover'} outlined onClick={() => removeProduct(product.id)}/>
+                </div>
             </div>
        </div>
     </ProductCartContainer>

@@ -40,6 +40,25 @@ export const ProductCartContainer = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-between;
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            @media (max-width: 290px) {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+        }
+        @media (max-width: 410px) {
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+    }
+    .quantity-btn{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     }
 `
 

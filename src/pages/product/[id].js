@@ -12,12 +12,14 @@ import { useContext, useState } from "react"
 import { ProductsListContext } from "@/context/ProductList"
 import { NotFound } from "@/components/NotFound"
 import { Loading } from "@/components/Loading"
+import { CartContext } from "@/context/CartProducts"
 
 const Product = () => {
   const router = useRouter()
   const productID = router.query.id
 
   const { products } = useContext(ProductsListContext);
+  const { addProduct } = useContext(CartContext)
   const product = products.find(product => product.id == productID);
   const [ loading, setLoading] = useState(true)
   
@@ -71,7 +73,7 @@ const Product = () => {
                     </div>
               </div>
               <div className="btn">
-                    <Button text={'ADICIONAR AO CARRINHO'} size={'1rem'} width={'100%'} outlined/>
+                    <Button text={'ADICIONAR AO CARRINHO'} size={'1rem'} width={'100%'} outlined onClick={() => addProduct(product.id)}/>
                     <Button text={'COMPRAR'} size={'1rem'} width={'100%'}/>
               </div>
             </ProductInfo>

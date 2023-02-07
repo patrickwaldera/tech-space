@@ -6,6 +6,7 @@ import { useContext} from 'react';
 import ProductsListProvider from '@/context/ProductList';
 import Head from 'next/head';
 import favicon from '../../public/static/favicon.ico';
+import CartProvider from '@/context/CartProducts';
 
 function ProviderWrapper({children}) {
   return (
@@ -27,7 +28,9 @@ function App({ Component, pageProps }) {
       <ThemeProvider theme={theme[contexto.mode]}>
           <GlobalStyle />
           <ProductsListProvider>
-            <Component {...pageProps} />
+            <CartProvider>
+              <Component {...pageProps} />
+            </CartProvider>
           </ProductsListProvider>
       </ThemeProvider>
     </>
