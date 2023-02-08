@@ -118,10 +118,21 @@ export const ProductInfo = styled.div`
         border-radius: 4px;
         z-index: 2;
         opacity: 0;
-        transition: opacity 3s;
-    }
-    .show {
-        opacity: 1;
+        animation: 3s fadeIn ease-in-out forwards;
+        @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+        }
     }
 
     @media (min-width: 768px) {
