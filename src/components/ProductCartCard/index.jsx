@@ -7,7 +7,7 @@ import { ProductCartContainer, ProductImg, Skeleton } from "./styles"
 const ProductCartCard = ({product, quantity}) => {
   const router = useRouter()
   const [ loading, setLoading] = useState(true)
-  const { addProduct, removeProduct} = useContext(CartContext)
+  const { addProduct, removeProduct, deleteProduct} = useContext(CartContext)
 
   return (
     <ProductCartContainer>
@@ -23,7 +23,7 @@ const ProductCartCard = ({product, quantity}) => {
                 <p>{quantity} x R$ {product.price.toLocaleString("pt-br", {style:"decimal", minimumFractionDigits: 2})}</p>
                 <div>
                   <p className="quantity-btn"><Button text={'-'} onClick={() => removeProduct(product.id)}/>{quantity}<Button text={'+'} onClick={() => addProduct(product.id)}/></p>
-                  <Button text={'Remover'} outlined onClick={() => removeProduct(product.id)}/>
+                  <Button text={'Remover'} outlined onClick={() => deleteProduct(product.id)}/>
                 </div>
             </div>
        </div>

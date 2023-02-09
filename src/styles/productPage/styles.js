@@ -120,18 +120,23 @@ export const ProductInfo = styled.div`
         opacity: 0;
         animation: 3s fadeIn ease-in-out forwards;
         @keyframes fadeIn {
-        0% {
-            opacity: 0;
+            0% {
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
         }
-        10% {
-            opacity: 1;
-        }
-        90% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-        }
+        a {
+            text-decoration: underline;
+            color: #f0f0f0;
+            margin-left: 1rem;
         }
     }
 

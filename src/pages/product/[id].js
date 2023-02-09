@@ -13,6 +13,7 @@ import { ProductsListContext } from "@/context/ProductList"
 import { NotFound } from "@/components/NotFound"
 import { Loading } from "@/components/Loading"
 import { CartContext } from "@/context/CartProducts"
+import Link from "next/link"
 
 const Product = () => {
   const router = useRouter()
@@ -82,7 +83,7 @@ const Product = () => {
                    }/>
                    {showMessage && (
                     <div className={`add-message`}>
-                      <p>Item adicionado ao carrinho!</p>
+                      <p>Item adicionado ao carrinho!<Link id="view-cart" href={'/cart'}>Visualizar!</Link></p>
                     </div>
                    )}
                     <Button text={'COMPRAR'} size={'1rem'} width={'100%'}/>

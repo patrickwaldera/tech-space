@@ -43,6 +43,12 @@ export default function CartProvider({children}) {
         }
     };
 
+    const deleteProduct = (productId) => {
+        const copyProductList = [...productsList]
+        const arrayFiltered = copyProductList.filter((product) => product.id !== productId)
+        setProductsList(arrayFiltered);
+    }
+
     const clearCart = () => {
         setProductsList([])
     }
@@ -52,7 +58,7 @@ export default function CartProvider({children}) {
       }, [productsList]);
 
     return (
-        <CartContext.Provider value={{ productsList, addProduct, removeProduct, clearCart }}>
+        <CartContext.Provider value={{ productsList, addProduct, removeProduct, deleteProduct, clearCart }}>
             {children}
         </CartContext.Provider>
     )
