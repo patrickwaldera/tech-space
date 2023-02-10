@@ -8,12 +8,13 @@ import { CartContext } from "@/context/CartProducts"
 import { ProductsListContext } from "@/context/ProductList"
 import { CartContainer, InputBox } from "@/styles/cartPage/styles"
 import { useRouter } from "next/router"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 
 const Cart = () => {
   const router = useRouter()
   const { products } = useContext(ProductsListContext)
   const { productsList, clearCart} = useContext(CartContext)
+  const [couponCode, setCouponCode] = useState('');
 
   const calculateTotal = (discount = 0) => {
     let total = 0;
@@ -23,6 +24,11 @@ const Cart = () => {
     });
     total = total - (total * discount)
     return total;
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Apply the coupon code here
   };
 
   return (
@@ -48,12 +54,16 @@ const Cart = () => {
                     <div className="input-wrapper">
                         <CartCard title={'Cupom'}>
                             <div className="input-cart">
-                                <InputBox>
-                                    <input type="text" placeholder='Cupom de desconto' />
-                                </InputBox>
-                                <div className="input-btn">
-                                    <Button text={'Aplicar'} />
-                                </div>
+                                <form onSubmit={handleSubmit}>
+                                    <InputBox>
+                                        <input type="text" placeholder='Cupom de desconto'
+                                        value={couponCode}
+                                        onChange={(event) => setCouponCode(event.target.value)} />
+                                    </InputBox>
+                                    <div className="input-btn">
+                                        <Button type="submit" text={'Aplicar'} />
+                                    </div>
+                                </form>
                             </div>
                         </CartCard>
                         <CartCard title={'Frete'}>

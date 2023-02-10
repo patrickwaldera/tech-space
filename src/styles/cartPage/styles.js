@@ -96,6 +96,13 @@ export const CartContainer = styled.section`
         justify-content: center;
         align-items: center;
         gap: 1rem;
+        form {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
     }
 
     .input-wrapper{
