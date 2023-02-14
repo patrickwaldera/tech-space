@@ -86,7 +86,10 @@ const Product = () => {
                       <p>Item adicionado ao carrinho!<Link id="view-cart" href={'/cart'}>Visualizar!</Link></p>
                     </div>
                    )}
-                    <Button text={'COMPRAR'} size={'1rem'} width={'100%'}/>
+                    <Button text={'COMPRAR'} size={'1rem'} width={'100%'} onClick={() => {
+                      addProduct(product.id)
+                      router.push('/cart');
+                    }} />
               </div>
             </ProductInfo>
           <ProductList title={'Mais produtos 🚀 '} text={'Ver mais'} products={products}/>

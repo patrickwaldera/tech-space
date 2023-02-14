@@ -26,7 +26,7 @@ const Cart = () => {
     return total;
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmitCoupon = (event) => {
     event.preventDefault();
     // Apply the coupon code here
   };
@@ -54,7 +54,7 @@ const Cart = () => {
                     <div className="input-wrapper">
                         <CartCard title={'Cupom'}>
                             <div className="input-cart">
-                                <form onSubmit={handleSubmit}>
+                                <form onSubmit={handleSubmitCoupon}>
                                     <InputBox>
                                         <input type="text" placeholder='Cupom de desconto'
                                         value={couponCode}
