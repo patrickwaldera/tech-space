@@ -2,11 +2,13 @@ import { BuyProduct, CardContainer, CustAndBuy, ProductImg, ProductPrice, Produc
 import { StarRating } from '../StarRating'
 import { Button } from '../Button'
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Loading } from '../Loading';
+import { CartContext } from '@/context/CartProducts';
 
 const ProductCard = ({id, rating, image, title, oldprice, price}) => {
   const router = useRouter();
+  const { addProduct } = useContext(CartContext)
   const [ loading, setLoading] = useState(true)
   return (
     <CardContainer>
@@ -31,7 +33,10 @@ const ProductCard = ({id, rating, image, title, oldprice, price}) => {
                 </div>
             </ProductPrice>
             <BuyProduct>
-                <Button text={'COMPRAR'}/>
+                <Button text={'COMPRAR'} onClick={() => {
+                      addProduct(id)
+                      router.push('/cart');
+                    }} />
             </BuyProduct>
         </CustAndBuy>
     </CardContainer>

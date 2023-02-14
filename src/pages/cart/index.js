@@ -14,7 +14,9 @@ const Cart = () => {
   const router = useRouter()
   const { products } = useContext(ProductsListContext)
   const { productsList, clearCart} = useContext(CartContext)
-  const [couponCode, setCouponCode] = useState('');
+  const [ couponCode, setCouponCode ] = useState('');
+  const [ discountValue, setDiscountValue ] = useState(0);
+  const [ couponMessage, setCouponMessage ] = useState('')
 
   const calculateTotal = (discount = 0) => {
     let total = 0;
@@ -26,9 +28,34 @@ const Cart = () => {
     return total;
   };
 
+  async function validateCoupon(cupom) {
+    const response = await fetch('/config.json');
+    const data = await response.json();
+  
+    const couponFound = data.coupons.find((c) => c.cod === cupom);
+  
+    if (!couponFound) {
+      return { erro: 'Cupom inválido!' };
+    }
+    
+    return { discountValue: couponFound.discountValue };
+  }
+
+  async function handleApplyCupom(cupom) {
+    const data = await validateCoupon(cupom);
+
+    if (data.erro) {
+      setCouponMessage(data.erro);
+      return;
+    }
+
+    setDiscountValue(data.discountValue);
+    setCouponMessage(`Cupom adicionado com sucesso! R$ ${data.discountValue.toLocaleString("pt-br", {style:"decimal", minimumFractionDigits: 2, maximumFractionDigits: 2})} OFF`)
+  }
+
   const handleSubmitCoupon = (event) => {
     event.preventDefault();
-    // Apply the coupon code here
+    handleApplyCupom(couponCode);
   };
 
   return (
@@ -58,22 +85,35 @@ const Cart = () => {
                                     <InputBox>
                                         <input type="text" placeholder='Cupom de desconto'
                                         value={couponCode}
-                                        onChange={(event) => setCouponCode(event.target.value)} />
+                                        onChange={(event) => {
+                                            setCouponCode(event.target.value);
+                                            setDiscountValue(0);
+                                            setCouponMessage('');
+                                        }} />
                                     </InputBox>
                                     <div className="input-btn">
-                                        <Button type="submit" text={'Aplicar'} />
+                                        <Button type="submit" text={'Adicionar'} />
                                     </div>
                                 </form>
+                                {couponMessage.length > 0
+                                &&
+                                <div className="coupon-message">
+                                    <p>{couponMessage}</p>
+                                    {discountValue > 0 && <p id="alert-message">* O desconto será aplicado ao finalizar o pedido!</p>}
+                                </div>
+                                }
                             </div>
                         </CartCard>
                         <CartCard title={'Frete'}>
                             <div className="input-cart">
-                                <InputBox>
-                                    <input type="text" placeholder='CEP' />
-                                </InputBox>
-                                <div className="input-btn">
-                                    <Button text={'Calcular'} />
-                                </div>
+                                <form>
+                                    <InputBox>
+                                        <input type="text" placeholder='CEP' />
+                                    </InputBox>
+                                    <div className="input-btn">
+                                        <Button text={'Calcular'} />
+                                    </div>
+                                </form>
                             </div>
                         </CartCard>
                     </div>

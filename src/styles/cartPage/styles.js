@@ -93,15 +93,24 @@ export const CartContainer = styled.section`
     .input-cart{
         width: 90%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
         form {
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 1rem;
+        }
+        .coupon-message {
+            margin-bottom: 1rem;
+            line-height: 1rem;
+            #alert-message{
+                font-size: 0.75rem;
+                opacity: .4;
+                text-align: center;
+            }
         }
     }
 

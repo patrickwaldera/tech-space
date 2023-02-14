@@ -7,7 +7,6 @@ export default function CartProvider({children}) {
 
     useEffect(() => {
         const savedCart = JSON.parse(localStorage.getItem('cart'));
-        console.log(savedCart)
         if(savedCart) {
             setProductsList(savedCart);
         }

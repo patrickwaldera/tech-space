@@ -600,5 +600,15 @@
             "stock": 22,
             "sold": 3
         }
+    ],
+    "coupons": [
+        {
+            "cod": "10OFF",
+            "discountValue": 10
+        },
+        {
+            "cod": "20OFF",
+            "discountValue": 20
+        }
     ]
 }
