@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const CartContainer = styled.section`
     max-width: 90%;
+    min-height: 70vh;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap-reverse;
@@ -139,6 +140,7 @@ export const CartContainer = styled.section`
         }
         .products-info{
             width: 68%;
+            align-self: flex-end;
         }
         .input-wrapper{
             flex-direction: row;
