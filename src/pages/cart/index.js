@@ -136,7 +136,7 @@ const Cart = () => {
                         </div>
                     </CartCard>
                     <div className="btn">
-                        <Button text={'FINALIZAR PEDIDO'} width={'100%'}/>
+                        <Button text={'FINALIZAR PEDIDO'} width={'100%'} onClick={() => router.push({ pathname: '/checkout', query: { total: `${calculateTotal()}`, coupon: `${discountValue > 0 ? `${couponCode}` : ''}` }})} />
                         <Button text={'CONTINUAR COMPRANDO'} width={'100%'} outlined onClick={() => router.push(`/products`)}/>
                     </div>
                 </div>
