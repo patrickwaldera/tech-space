@@ -8,6 +8,7 @@ import { useRouter } from "next/router"
 import { useContext, useState } from "react"
 
 const Search = () => {
+    
     const router = useRouter()
     let search = router.query.product
     const { products } = useContext(ProductsListContext);

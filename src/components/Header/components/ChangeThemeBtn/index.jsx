@@ -7,12 +7,12 @@ const ChangeThemeBtn = () => {
   const contexto = useContext(ColorModeContext);
   return (
     <ChangeThemeContainer>
-        {contexto.mode === 'dark' ? 
-            <MdOutlineLightMode size={24}  onClick={contexto.toggleTheme}/>
-            
-        :
-            <MdDarkMode size={24}  onClick={contexto.toggleTheme}/>
-        }
+      {contexto.mode === 'dark' ? 
+        <MdOutlineLightMode size={24}  onClick={contexto.toggleTheme}/>
+          
+      :
+        <MdDarkMode size={24}  onClick={contexto.toggleTheme}/>
+      }
     </ChangeThemeContainer>
   )
 }

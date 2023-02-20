@@ -12,6 +12,7 @@ import { useRouter } from "next/router"
 import { useContext, useState } from "react"
 
 const Cart = () => {
+    
   const router = useRouter()
   const { products } = useContext(ProductsListContext)
   const { productsList, clearCart} = useContext(CartContext)

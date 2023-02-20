@@ -9,7 +9,7 @@ export const CheckoutContainer = styled.div`
     height: 100vh;
     z-index: 9;
     pointer-events: none;
-    background-color: #ffffff20;
+    background-color: #00000090;
     backdrop-filter: blur(1px);
     opacity: 0;
 
@@ -54,5 +54,6 @@ export const CheckoutContainer = styled.div`
         top: 5px;
         right: 10px;
         cursor: pointer;
+        color: #ffffff;
     }
 `

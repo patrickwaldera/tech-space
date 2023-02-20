@@ -7,16 +7,18 @@ import { Loading } from '../Loading';
 import { CartContext } from '@/context/CartProducts';
 
 const ProductCard = ({id, rating, image, title, oldprice, price}) => {
+
   const router = useRouter();
   const { addProduct } = useContext(CartContext)
   const [ loading, setLoading] = useState(true)
+
   return (
     <CardContainer>
         <StarRating ratingStars={rating} />
         {loading && <Skeleton><Loading /></Skeleton>}
-            <ProductImg onLoadingComplete={() => {
-                setLoading(false)
-                }} src={image} alt="" fill sizes="100%" onClick={() => router.push(`/product/${id}`)} loading='eager' style={{display: loading ? 'none' : 'block'}} />
+        <ProductImg onLoadingComplete={() => {
+            setLoading(false)
+            }} src={image} alt="" fill sizes="100%" onClick={() => router.push(`/product/${id}`)} loading='eager' style={{display: loading ? 'none' : 'block'}} />
         <ProductTitle>
             <p>{title}</p>
         </ProductTitle>

@@ -3,6 +3,7 @@ import { MdStarRate } from "react-icons/md"
 import { StarsContainer } from "./styles"
 
 const StarRating = ({ratingStars}) => {
+    
     const [rating, setRating] = useState(ratingStars || 0);
 
     useEffect(() => {

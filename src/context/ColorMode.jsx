@@ -7,6 +7,7 @@ export const ColorModeContext = createContext({
 });
 
 export default function ColorModeProvider({children, initialMode}) {
+  
   const [ mode, setMode ] = useState(initialMode)
 
   useEffect(() => {

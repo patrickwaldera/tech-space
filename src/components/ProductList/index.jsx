@@ -29,22 +29,22 @@ const ProductList = ({title, text, showTitle=true, showBtn=true, products, order
 
   return (
     <ProductListContainer>
-        {showTitle && 
-        <TitleList>
-            <p>{title}</p>
-            <Link href={{ pathname: '/products', query: { q: orderBy } }}>{text}</Link>
-        </TitleList>
-        }
-        <List>
-          {products.slice(0, limit).map((product) => <ProductCard key={product.id} id={product.id} rating={product.rating} image={product.images[0]} title={product.title} oldprice={product.oldprice} price={product.price}/>)}           
-        </List>
-        {limit < products.length ?
-            <>
-              {showBtn && <Button text={text} outlined onClick={handleLoadMore} />}
-            </>
-          :
-            null
-        }
+      {showTitle && 
+      <TitleList>
+        <p>{title}</p>
+        <Link href={{ pathname: '/products', query: { q: orderBy } }}>{text}</Link>
+      </TitleList>
+      }
+      <List>
+        {products.slice(0, limit).map((product) => <ProductCard key={product.id} id={product.id} rating={product.rating} image={product.images[0]} title={product.title} oldprice={product.oldprice} price={product.price}/>)}           
+      </List>
+      {limit < products.length ?
+          <>
+            {showBtn && <Button text={text} outlined onClick={handleLoadMore} />}
+          </>
+        :
+          null
+      }
     </ProductListContainer>
   )
 }

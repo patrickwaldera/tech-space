@@ -34,28 +34,28 @@ const CheckoutModal = ({modalIsVisible, setModalIsVisible, productsList}) => {
   return (
     <CheckoutContainer isVisible={modalIsVisible}>
         <div className='modal' ref={modalRef}>
-            <IoClose id="close" size={36} onClick={() => setModalIsVisible(false)}/>
-            <CartCard title={'Parabéns!'}>
-                <p id='message'>Seu pedido foi finalizado!</p>
-                <div className='products-title'>
-                    <p>Produtos:</p>
-                </div>
-                <div className='products'>
-                    {productsList.length > 0 ? 
-                        productsList.map((item) => {
-                            const product = products.find((p) => p.id === item.id);
-                            return (
-                                <ProductCartCard key={product.id} product={product} quantity={item.quantity} checkout={true}/>
-                            );
-                        }) 
-                        : 
-                        null
-                    }
-                </div>
-                <div className='button'>
-                    <Button text={'CONTINUAR COMPRANDO'} width={'100%'} onClick={() => router.push(`/products`)}/>
-                </div>
-            </CartCard>
+          <IoClose id="close" size={36} onClick={() => setModalIsVisible(false)}/>
+          <CartCard title={'Parabéns!'}>
+            <p id='message'>Seu pedido foi finalizado!</p>
+            <div className='products-title'>
+                <p>Produtos:</p>
+            </div>
+            <div className='products'>
+                {productsList.length > 0 ? 
+                    productsList.map((item) => {
+                        const product = products.find((p) => p.id === item.id);
+                        return (
+                            <ProductCartCard key={product.id} product={product} quantity={item.quantity} checkout={true}/>
+                        );
+                    }) 
+                    : 
+                    null
+                }
+            </div>
+            <div className='button'>
+                <Button text={'CONTINUAR COMPRANDO'} width={'100%'} onClick={() => router.push(`/products`)}/>
+            </div>
+          </CartCard>
         </div>
     </CheckoutContainer>
   )

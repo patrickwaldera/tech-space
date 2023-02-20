@@ -4,11 +4,11 @@ import paymentMethods from '../../assets/paymentMethods.png'
 import { FooterContainer, FooterLinks, PaymentMethods } from './styles'
 
 const Footer = () => {
-  return (
-    <FooterContainer>
-        <a href='#index'>
-            <Image id='logoWithText' src={logoWithText} alt='Tech Space' priority/>
-        </a>
+    return (
+        <FooterContainer>
+            <a href='#index'>
+                <Image id='logoWithText' src={logoWithText} alt='Tech Space' priority/>
+            </a>
         <PaymentMethods>
             <p>FORMAS DE PAGAMENTO</p>
             <Image src={paymentMethods} alt='Métodos de Pagamento' loading="lazy"/>
@@ -16,8 +16,8 @@ const Footer = () => {
         <FooterLinks>
             <div className='footer-link'>
                 <p className='footer-link-title'>QUEM SOMOS?</p>
-                <a href='/about'>Sobre</a>
-                <a href='/location'>Localização</a>
+                <a href=''>Sobre</a>
+                <a href=''>Localização</a>
             </div>
             <div className='footer-link'>
                 <p className='footer-link-title'>CLIENTE</p>

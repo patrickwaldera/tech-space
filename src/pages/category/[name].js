@@ -9,9 +9,13 @@ import { useContext, useEffect, useState } from "react"
 import config from '../../../config.json'
 
 const Category = () => {
+
     const router = useRouter()
     let category = router.query.name 
     const [categoryIsValid, setCategoryIsValid] = useState(false)
+    const { products } = useContext(ProductsListContext);
+    const productsFiltered = products.filter((product) => product.category == category)
+    const [ order, setOrder] = useState('bestSellers')
     
     useEffect(() => {
         if(config.departments.find(department => department.name.toLowerCase().normalize('NFD').replace(/\p{Mn}/gu, "") == category))
@@ -19,11 +23,6 @@ const Category = () => {
             setCategoryIsValid(true)
         }
     }, [category])
-    
-
-    const { products } = useContext(ProductsListContext);
-    const productsFiltered = products.filter((product) => product.category == category)
-    const [ order, setOrder] = useState('bestSellers')
 
     const handleSortOrderChange = (event) => {
         setOrder(event.target.value)

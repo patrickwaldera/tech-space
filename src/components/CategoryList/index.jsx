@@ -6,7 +6,7 @@ const CategoryList = () => {
   return (
     <CategoryListContainer>
         <TitleList>
-            <p>Categorias 📁</p>
+          <p>Categorias 📁</p>
         </TitleList>
         <List>
           {config.departments.map((category) => <CategoryCard key={category.id} title={category.name} image={category.image} />)}        

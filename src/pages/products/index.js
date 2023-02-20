@@ -4,7 +4,6 @@ import { ProductList } from "@/components/ProductList"
 import { ProductsListContext } from "@/context/ProductList"
 import { ProductsPageContainer } from "@/styles/productsPage/styles"
 import { useRouter } from "next/router"
-
 import { useContext, useState } from "react"
 
 const Products = () => {

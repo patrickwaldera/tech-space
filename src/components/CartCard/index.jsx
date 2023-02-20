@@ -4,12 +4,12 @@ const CartCard = ({children, title}) => {
   return (
     <>
         <CardContainer>
-            <TitleCard>
-                <p>{title}</p>
-            </TitleCard>
-            <ContentCard>
-                {children}
-            </ContentCard>
+          <TitleCard>
+              <p>{title}</p>
+          </TitleCard>
+          <ContentCard>
+              {children}
+          </ContentCard>
         </CardContainer>
     </>
   )

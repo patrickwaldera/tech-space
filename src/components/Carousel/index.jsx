@@ -19,12 +19,12 @@ const Carousel = () => {
         slidesToScroll={1}
         dots={true}
       >
-              <CarouselItem>
-                <CarouselImg src={techspace} alt="Tech Space" priority/>
-              </CarouselItem>
-              <CarouselItem>
-                <CarouselImg src={techspace2} alt="Tech Space" priority/>
-              </CarouselItem>
+          <CarouselItem>
+            <CarouselImg src={techspace} alt="Tech Space" priority/>
+          </CarouselItem>
+          <CarouselItem>
+            <CarouselImg src={techspace2} alt="Tech Space" priority/>
+          </CarouselItem>
         </Slider>
       </CarouselContainer>
     </>

@@ -16,9 +16,9 @@ import { CartContext } from "@/context/CartProducts"
 import Link from "next/link"
 
 const Product = () => {
+
   const router = useRouter()
   const productID = router.query.id
-
   const { products } = useContext(ProductsListContext);
   const { addProduct } = useContext(CartContext)
   const product = products.find(product => product.id == productID);
@@ -40,6 +40,7 @@ const Product = () => {
     slidesToShow: 1,
     slidesToScroll: 1
   };
+
   return (
     <>
       <Header />
@@ -65,31 +66,31 @@ const Product = () => {
               <p className="description">{product?.description}</p>
               <div className="price">
                 {product?.oldprice !== 0 ? 
-                        <p className='old-price'>de: <span>R$ {product?.oldprice.toLocaleString("pt-br", {style:"decimal", minimumFractionDigits: 2})}</span> por:</p>
-                    :               
-                        <p className='old-price'>-</p>
-                    }
-                    <div className='price'>
-                        <p>R$ <strong>{product?.price.toLocaleString("pt-br", {style:"decimal", minimumFractionDigits: 2})}</strong></p>
-                        <p>à vista no boleto ou PIX</p>
-                    </div>
+                  <p className='old-price'>de: <span>R$ {product?.oldprice.toLocaleString("pt-br", {style:"decimal", minimumFractionDigits: 2})}</span> por:</p>
+                  :               
+                  <p className='old-price'>-</p>
+                }
+                <div className='price'>
+                  <p>R$ <strong>{product?.price.toLocaleString("pt-br", {style:"decimal", minimumFractionDigits: 2})}</strong></p>
+                  <p>à vista no boleto ou PIX</p>
+                </div>
               </div>
               <div className="btn">
-                    <Button text={'ADICIONAR AO CARRINHO'} size={'1rem'} width={'100%'} outlined onClick={() => {
-                      addProduct(product.id)
-                      setShowMessage(true);
-                      setTimeout(() => setShowMessage(false), 3000);
-                    }
-                   }/>
-                   {showMessage && (
-                    <div className={`add-message`}>
-                      <p>Item adicionado ao carrinho!<Link id="view-cart" href={'/cart'}>Visualizar!</Link></p>
-                    </div>
-                   )}
-                    <Button text={'COMPRAR'} size={'1rem'} width={'100%'} onClick={() => {
-                      addProduct(product.id)
-                      router.push('/cart');
-                    }} />
+                <Button text={'ADICIONAR AO CARRINHO'} size={'1rem'} width={'100%'} outlined onClick={() => {
+                  addProduct(product.id)
+                  setShowMessage(true);
+                  setTimeout(() => setShowMessage(false), 3000);
+                }
+                }/>
+                {showMessage && (
+                <div className={`add-message`}>
+                  <p>Item adicionado ao carrinho!<Link id="view-cart" href={'/cart'}>Visualizar!</Link></p>
+                </div>
+                )}
+                <Button text={'COMPRAR'} size={'1rem'} width={'100%'} onClick={() => {
+                  addProduct(product.id)
+                  router.push('/cart');
+                }} />
               </div>
             </ProductInfo>
           <ProductList title={'Mais produtos 🚀 '} text={'Ver mais'} products={products}/>
