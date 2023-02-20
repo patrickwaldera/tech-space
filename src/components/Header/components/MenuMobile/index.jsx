@@ -43,7 +43,7 @@ const MenuMobile = ({menuIsVisible, setMenuIsVisible}) => {
       <Wrapper ref={mobileRef}>
         <IoClose id="close" size={36} onClick={() => setMenuIsVisible(false)}/>
         <MenuItemsContainer>
-          <MenuItem onClick={() => router.push(`/account`)}>
+          <MenuItem onClick={() => router.push(`/`)}>
             <MdAccountCircle size={24} />
             <p>Minha Conta</p>
           </MenuItem>

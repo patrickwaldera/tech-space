@@ -4,7 +4,7 @@ import { useContext, useState } from "react"
 import { Button } from "../Button"
 import { ProductCartContainer, ProductImg, Skeleton } from "./styles"
 
-const ProductCartCard = ({product, quantity}) => {
+const ProductCartCard = ({product, quantity, checkout = false}) => {
   const router = useRouter()
   const [ loading, setLoading] = useState(true)
   const { addProduct, removeProduct, deleteProduct} = useContext(CartContext)
@@ -21,10 +21,12 @@ const ProductCartCard = ({product, quantity}) => {
             </p>
             <div className="product-info">
                 <p>{quantity} x R$ {product.price.toLocaleString("pt-br", {style:"decimal", minimumFractionDigits: 2})}</p>
-                <div>
-                  <p className="quantity-btn"><Button text={'-'} onClick={() => removeProduct(product.id)}/>{quantity}<Button text={'+'} onClick={() => addProduct(product.id)}/></p>
-                  <Button text={'Remover'} outlined onClick={() => deleteProduct(product.id)}/>
-                </div>
+                {!checkout && 
+                  <div>
+                    <p className="quantity-btn"><Button text={'-'} onClick={() => removeProduct(product.id)}/>{quantity}<Button text={'+'} onClick={() => addProduct(product.id)}/></p>
+                    <Button text={'Remover'} outlined onClick={() => deleteProduct(product.id)}/>
+                 </div>
+                }
             </div>
        </div>
     </ProductCartContainer>

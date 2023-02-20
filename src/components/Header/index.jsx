@@ -71,7 +71,7 @@ const Header = () => {
                                 </div>
                                 <p>Carrinho</p>
                             </DesktopItem>
-                            <DesktopItem onClick={() => router.push(`/account`)}>
+                            <DesktopItem onClick={() => router.push(`/`)}>
                                 <MdAccountCircle size={24} />
                                 <p>Minha Conta</p>
                             </DesktopItem>

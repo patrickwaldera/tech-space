@@ -6,6 +6,7 @@ import { NotFound } from "@/components/NotFound"
 import { ProductCartCard } from "@/components/ProductCartCard"
 import { CartContext } from "@/context/CartProducts"
 import { ProductsListContext } from "@/context/ProductList"
+import { CheckoutModal } from "@/components/CheckoutModal"
 import { CartContainer, InputBox } from "@/styles/cartPage/styles"
 import { useRouter } from "next/router"
 import { useContext, useState } from "react"
@@ -17,6 +18,8 @@ const Cart = () => {
   const [ couponCode, setCouponCode ] = useState('');
   const [ discountValue, setDiscountValue ] = useState(0);
   const [ couponMessage, setCouponMessage ] = useState('')
+  const [ modalIsVisible, setModalIsVisible ] = useState(false)
+  const [ productsCheckout, setProductsCheckout ] = useState([]);
 
   const calculateTotal = (discount = 0) => {
     let total = 0;
@@ -60,6 +63,13 @@ const Cart = () => {
 
   return (
     <>
+        {modalIsVisible && 
+            <CheckoutModal 
+                modalIsVisible={modalIsVisible}
+                setModalIsVisible={setModalIsVisible}
+                productsList={productsCheckout}
+            />
+        }
         <Header />
         <CartContainer>
             {productsList.length > 0 ? 
@@ -136,7 +146,12 @@ const Cart = () => {
                         </div>
                     </CartCard>
                     <div className="btn">
-                        <Button text={'FINALIZAR PEDIDO'} width={'100%'} onClick={() => router.push({ pathname: '/checkout', query: { total: `${calculateTotal()}`, coupon: `${discountValue > 0 ? `${couponCode}` : ''}` }})} />
+                        <Button text={'FINALIZAR PEDIDO'} width={'100%'} onClick={() => {
+                            setProductsCheckout(productsList);
+                            console.log(productsCheckout)
+                            setModalIsVisible(true);
+                            clearCart();
+                        }} />
                         <Button text={'CONTINUAR COMPRANDO'} width={'100%'} outlined onClick={() => router.push(`/products`)}/>
                     </div>
                 </div>
